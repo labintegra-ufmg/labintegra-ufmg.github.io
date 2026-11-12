@@ -4,3 +4,5 @@ resources/
 __pycache__/
 .venv/
 .env
+
+*.bak

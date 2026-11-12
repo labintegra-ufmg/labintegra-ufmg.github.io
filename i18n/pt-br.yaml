@@ -38,3 +38,15 @@ tipo_congresso: Congresso
 tipo_livro: Livro
 tipo_capitulo: Capítulo
 tipo_outro: Outro
+cat_professor: Professores
+cat_pesquisador: Pesquisadores
+cat_posdoc: Pós-doutorandos
+cat_doutorando: Doutorandos
+cat_mestrando: Mestrandos
+cat_ic: Iniciação científica
+cat_colaborador: Colaboradores
+cat_egresso: Egressos
+profile_pubs: Publicações
+profile_areas: Áreas de pesquisa
+profile_links: Perfis
+no_pubs: Nenhuma publicação associada ainda.

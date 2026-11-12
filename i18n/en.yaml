@@ -38,3 +38,15 @@ tipo_congresso: Conference
 tipo_livro: Book
 tipo_capitulo: Chapter
 tipo_outro: Other
+cat_professor: Professors
+cat_pesquisador: Researchers
+cat_posdoc: Postdoctoral researchers
+cat_doutorando: PhD students
+cat_mestrando: MSc students
+cat_ic: Undergraduate research
+cat_colaborador: Collaborators
+cat_egresso: Alumni
+profile_pubs: Publications
+profile_areas: Research areas
+profile_links: Profiles
+no_pubs: No associated publications yet.

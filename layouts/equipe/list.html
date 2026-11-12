@@ -1,0 +1,25 @@
+{{ define "main" }}
+<section class="page-hero"><div class="container"><h1>{{ .Title }}</h1></div></section>
+<section class="section">
+  <div class="container">
+    {{ .Content }}
+    {{ $pages := .Pages }}
+    {{ range slice "professor" "pesquisador" "posdoc" "doutorando" "mestrando" "ic" "colaborador" "egresso" }}
+      {{ $c := . }}
+      {{ $g := where $pages "Params.categoria" $c }}
+      {{ if $g }}
+        <h2 class="section-title">{{ i18n (printf "cat_%s" $c) }}</h2>
+        <div class="people">
+          {{ range $g.ByTitle }}
+          <a class="person" href="{{ .RelPermalink }}">
+            {{ partial "foto.html" (dict "p" . "cls" "") }}
+            <h3>{{ .Title }}</h3>
+            <p class="role">{{ .Params.cargo }}</p>
+          </a>
+          {{ end }}
+        </div>
+      {{ end }}
+    {{ end }}
+  </div>
+</section>
+{{ end }}

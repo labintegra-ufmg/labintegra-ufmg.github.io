@@ -1,0 +1,27 @@
+{{ define "main" }}
+{{ $id := .Params.id | default .File.ContentBaseName }}
+<section class="page-hero"><div class="container"><h1>{{ .Title }}</h1>{{ with .Params.cargo }}<p class="hero-role">{{ . }}</p>{{ end }}</div></section>
+<section class="section">
+  <div class="container profile">
+    <aside class="profile-side">
+      {{ partial "foto.html" (dict "p" . "cls" "avatar-lg") }}
+      <h2 class="side-title">{{ i18n "profile_links" }}</h2>
+      <ul class="links">
+        {{ with .Params.orcid }}<li><a href="https://orcid.org/{{ . }}" target="_blank" rel="noopener">ORCID</a></li>{{ end }}
+        {{ with .Params.lattes }}<li><a href="{{ . }}" target="_blank" rel="noopener">Lattes</a></li>{{ end }}
+        {{ with .Params.scholar }}<li><a href="{{ . }}" target="_blank" rel="noopener">Google Scholar</a></li>{{ end }}
+        {{ with .Params.linkedin }}<li><a href="{{ . }}" target="_blank" rel="noopener">LinkedIn</a></li>{{ end }}
+        {{ with .Params.email }}<li><a href="mailto:{{ . }}">E-mail</a></li>{{ end }}
+      </ul>
+    </aside>
+    <div class="profile-main">
+      <div class="prose">{{ .Content }}</div>
+      {{ with .Params.areas }}<h2 class="sub">{{ i18n "profile_areas" }}</h2><ul class="chips">{{ range . }}<li>{{ . }}</li>{{ end }}</ul>{{ end }}
+      <h2 class="sub">{{ i18n "profile_pubs" }}</h2>
+      {{ $mine := slice }}
+      {{ range partial "pubs.html" . }}{{ if in (.pesquisadores | default slice) $id }}{{ $mine = $mine | append . }}{{ end }}{{ end }}
+      {{ if $mine }}<div class="pub-list">{{ range $mine }}{{ partial "pub-card.html" . }}{{ end }}</div>{{ else }}<p class="muted">{{ i18n "no_pubs" }}</p>{{ end }}
+    </div>
+  </div>
+</section>
+{{ end }}

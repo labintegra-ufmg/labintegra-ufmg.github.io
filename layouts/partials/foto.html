@@ -1,0 +1,1 @@
+{{ $p := .p }}{{ with $p.Params.foto }}<img class="avatar {{ $.cls }}" src="{{ . | relURL }}" alt="{{ $p.Title }}" loading="lazy">{{ else }}<div class="avatar avatar-ph {{ $.cls }}" aria-hidden="true">{{ substr $p.Title 0 1 }}</div>{{ end }}

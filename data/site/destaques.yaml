@@ -6,6 +6,7 @@
     en: "Explore the laboratory's research lines, team and publications."
   link: "/pesquisa/"
 - tipo: projeto
+  exemplo: true
   data: "2026-01-05"
   titulo: { pt-br: "projeto de planejamento energético", en: "Example: energy planning project" }
   texto:

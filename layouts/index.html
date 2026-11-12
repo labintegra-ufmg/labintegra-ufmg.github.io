@@ -13,8 +13,8 @@
 
         {{ $pubs := partial "pubs.html" . }}
     {{ $slides := slice }}
-    {{ range site.Data.site.destaques }}
-      {{ $slides = $slides | append (dict "tipo" .tipo "data" .data "titulo" (index .titulo $.Lang) "texto" (index .texto $.Lang) "link" (.link | default "")) }}
+    {{ range hugo.Data.site.destaques }}
+      {{ if not .exemplo }}{{ $slides = $slides | append (dict "tipo" .tipo "data" .data "titulo" (index .titulo $.Lang) "texto" (index .texto $.Lang) "link" (.link | default "")) }}{{ end }}
     {{ end }}
     {{ range first 3 $pubs }}
       {{ $l := .url | default "" }}
@@ -54,7 +54,7 @@
     <h2 class="section-title">{{ i18n "lines_title" }}</h2>
     <p class="section-sub">{{ i18n "lines_sub" }}</p>
     <div class="cards">
-      {{ range site.Data.site.linhas }}
+      {{ range hugo.Data.site.linhas }}
       <article class="card">
         <div class="card-icon">{{ .icone }}</div>
         <h3>{{ index .titulo $.Lang }}</h3>
