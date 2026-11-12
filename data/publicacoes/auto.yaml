@@ -1,1 +1,150 @@
-[]
+- titulo: 'Ambition versus Historically Grounded Transition Feasibility: Structural Constraints in Carbon-Budget Pathways'
+  autores:
+  - Carlos E Velásquez
+  - Douglas Silva Oliveira
+  - José Péricles Freire
+  - Masoumeh Bararzadeh Ledari
+  ano: 2026
+  tipo: artigo
+  veiculo: Research Square
+  acesso_aberto: true
+  url_oa: https://www.researchsquare.com/article/rs-11029336/latest.pdf
+  citacoes: 0
+  resumo: Abstract Decarbonization is increasingly constrained by finite cumulative carbon budgets and by the speed of structural and technological change. This study evaluates the conditional structural viability of Reference, 1.5°C, 2°C, NDC, and Energy Justice pathways across ten world regions. Region-specific baseline trajectories for population, GDP, primary energy consumption, and CO 2 emissions are generated through an out-of-sample evaluated multi-model forecasting framework. Mitigation pathways are then constructed through iterative scaling under historically calibrated annual transition bounds and assessed using rolling Cobb–Douglas diagnostics, emissions-intensity decomposition, and technology-specific mitigation matching. The results show that the 1.5°C-oriented pathway remains substantially above its adopted 276 GtCO 2 budget and retains unmet mitigation under all technology-deployment assumptions. The NDC pathway also remains technologically incomplete, whereas Energy Justice approaches high coverage under recent and medium-term deployment rates but retains residual implementation gaps. The modeled 2°C pathway shows near-complete coverage of the gross positive region-year mitigation requirement across the three deployment assumptions; however, cumulative emissions remain slightly above the adopted 978 GtCO 2 budget. Gross technology-matching requirements are therefore distinguished from the net global cumulative emissions difference.
+  id: doi-10-21203-rs-3-rs-11029336-v1
+  doi: 10.21203/rs.3.rs-11029336/v1
+  pesquisadores:
+  - douglas-oliveira
+- titulo: 'Technology-Oriented Wind Farm Configuration Selection Using an RFR-Based Turbine Power-Output Surrogate Model: A National-Scale Assessment for Brazil'
+  autores:
+  - José Péricles Freire
+  - Douglas Silva de Oliveira
+  - Lihki Rubio
+  - Jin Seok Yang
+  - Carlos Eduardo Velasquez
+  ano: 2026
+  tipo: artigo
+  veiculo: Energies
+  acesso_aberto: true
+  url_oa: https://doi.org/10.3390/en19174167
+  citacoes: 0
+  resumo: 'This work presents a framework for national-scale onshore wind farm screening in Brazil based on turbine technology. The approach integrates ERA5 hourly wind fields, turbine technical specifications, a Random Forest Regression (RFR)-based turbine power-output surrogate model, and GIS-based spatial exclusion analysis. The RFR model was trained using 821 empirical power curves, enabling different real turbine models to be evaluated within a unified framework. Seven representative turbines were evaluated across five wind farm configurations under capacity-factor thresholds of 0.20, 0.25, and 0.44. Results show that turbine technology substantially changes site suitability: for CF≥0.20, viable locations ranged from 116 to 1846, and for CF≥0.25, from 19 to 1175. Only 298 locations nationally reached CF≥0.44, with the two best-performing configurations accounting for 297 of them. Even between these similarly rated turbines, neither dominated nationally: one outperformed the other at 58.5% of viable locations, with the reverse holding for the remaining 41.5%. Under the cost assumptions adopted, only the best-performing configurations achieved levelized costs of energy competitive with recently contracted wind energy prices in Brazil. Validation against the Icaraizinho wind farm yielded an MAPE of 6.40%. Overall, the results demonstrate that wind potential is technology-dependent and should be assessed using turbine-specific performance models.'
+  id: doi-10-3390-en19174167
+  doi: 10.3390/en19174167
+  pesquisadores:
+  - douglas-oliveira
+- titulo: 'The curtailment cost paradox: Intermittency penalties invert hydrogen production economics in a vre-rich emerging economy'
+  autores:
+  - Douglas Silva de Oliveira
+  - Carlos Eduardo Velasquez
+  ano: 2026
+  tipo: artigo
+  veiculo: International Journal of Hydrogen Energy
+  acesso_aberto: true
+  url_oa: https://doi.org/10.1016/j.ijhydene.2026.156327
+  citacoes: 0
+  resumo: 'Electricity curtailment, the forced reduction of renewable output when grids cannot absorb available generation, is an increasingly structural feature of high-penetration renewable systems. In Northeast Brazil, where wind and solar capacity has surpassed 39 GW, curtailment already exceeds 10–20% of potential generation, eroding project returns. Green hydrogen appears to offer a natural solution: redirect curtailed electricity to electrolyzers. Yet this study demonstrates why this approach is more costly than dedicated renewable supply. Using integrated GIS-based spatial screening, Monte Carlo-Fuzzy-AHP weighting, and probabilistic techno-economic modeling across 36 planning regions and three technology horizons (2025, 2030, 2035), results show that dedicated renewable hubs achieve 15–30% lower levelized hydrogen costs than curtailment-capture systems. This counterintuitive result is driven by intermittency: ONS operational records show curtailment occurs in concentrated bursts, limiting electrolyzer utilization to 2000–3000 h/yr versus 4000 h/yr for dedicated hubs, amplifying capital cost per kilogram and erasing the electricity price advantage. Combined green hydrogen production potential ranges from 2.4 to 12.9 Mt H 2 /yr, with levelized costs declining from US$5.84–13.08/kg (2025) to US$1.58–2.74/kg (2035). Under 2035 conditions, 75% of projects achieve technical viability with mean NPV of US$120 M/hub.'
+  id: doi-10-1016-j-ijhydene-2026-156327
+  doi: 10.1016/j.ijhydene.2026.156327
+  pesquisadores:
+  - douglas-oliveira
+- titulo: ESTIMATIVA DA REDUÇÃO DE EMISSÕES DE CO₂ PELA INTRODUÇÃO DE HIDROGÊNIO VERDE NA FROTA DE TRANSPORTE PÚBLICO DE BELO HORIZONTE
+  autores:
+  - Maria Luiza SIlvia Gonçalves
+  - Antonella Lombardi Costa
+  - Carlos Eduardo Velasquez
+  - Douglas Silva
+  - Gustavo Moura
+  ano: 2024
+  tipo: congresso
+  veiculo: Anais da Semana Nacional de Engenharia Nuclear e da Energia e Ciências das Radiações
+  acesso_aberto: true
+  url_oa: https://static.even3.com/anais/914441.pdf?v=639024597647008575
+  citacoes: 0
+  resumo: A introdução do hidrogênio no sistema de transporte público oferece uma perspectiva promissora para a redução significativa das emissões de poluentes atmosféricos na cidade. Nesse sentido, conforme apresentado nesse trabalho, foi delineada a proposta de substituir gradativamente 10% da frota por ônibus móveis a hidrogênio da cidade de Belo Horizonte, em Minas Gerais, até 2040, em consonância com as metas globais de proteção ambiental e o Plano Local de Ação Climática (PLAC) desenvolvido pela Prefeitura de Belo Horizonte (PBH). Em um cenário projetado de 2026-2040, Belo Horizonte poderia evitar a emissão de 10.170 toneladas de CO₂, evidenciando os benefícios dessa transição, conforme mostram os resultados apresentados neste trabalho. Além de contribuir para a redução das emissões de CO₂, essa transformação impulsiona a tecnologia e consolida a infraestrutura urbana de Belo Horizonte, colocando a capital mineira como um modelo de sustentabilidade no setor de transporte público.
+  id: doi-10-29327-vii-sencir-semana-nacional-de-engenharia-nuclear-e-da-energia-e-ciencias-das-radiacoes-449507-914441
+  doi: 10.29327/vii-sencir-semana-nacional-de-engenharia-nuclear-e-da-energia-e-ciencias-das-radiacoes-449507.914441
+  pesquisadores:
+  - douglas-oliveira
+- titulo: 'Hydrogen energy for change: SWOT analysis for energy transition'
+  autores:
+  - Douglas Soares de Oliveira
+  - Antonella Lombardi Costa
+  - Carlos Eduardo Velasquez
+  ano: 2024
+  tipo: artigo
+  veiculo: Sustainable Energy Technologies and Assessments
+  acesso_aberto: false
+  citacoes: 15
+  id: doi-10-1016-j-seta-2024-104063
+  doi: 10.1016/j.seta.2024.104063
+  pesquisadores:
+  - douglas-oliveira
+- titulo: 'HYDROGEN INTEGRATION IN THE BRAZILIAN ENERGY MATRIX: A COMPREHENSIVE REVIEW OF UTILIZATION TECHNOLOGIES'
+  autores:
+  - Douglas Silva
+  - Carlos Eduardo Velasquez
+  - Antonella Lombardi Costa
+  ano: 2024
+  tipo: congresso
+  veiculo: Anais da Semana Nacional de Engenharia Nuclear e da Energia e Ciências das Radiações
+  acesso_aberto: true
+  url_oa: https://static.even3.com/anais/845712.pdf?v=639024597060321297
+  citacoes: 0
+  resumo: Since the onset of the industrial revolution, societal progression has incessantly pursued advancements in energy generation, due to the need for amenities, which increased the final energy demand from electricity, heating and transportation. Energy consumption provides a pivotal role in technological and scientific evolution and, consequently, societal development. However, economic considerations wield considerable influence over the predominant choice of energy generation, resulting in the widespread reliance on fossil fuels since the inception of industrialization. This dependency, coupled with anthropogenic activities, has precipitated the exacerbation of climate change through greenhouse gases (GHG) emissions. Consequently, from the early 21th century onwards, the quest for alternative energy with low-GHG-emitting has intensified and the society look for more sustainable ways to energy generation. Among the current available alternatives, hydrogen has emerged as a promising alternative due to its potential utilization with low or zero GHG-emitting. This paper aims to address the gap through a comprehensive literature review focusing on hydrogen and its applications within the Brazilian context. By synthesizing existing research, it seeks to elucidate the potential applications of hydrogen within the country, thereby facilitating a clearer understanding of its feasibility as an alternative to fossil fuels. Our findings indicate that the hydrogen supply chain can be adapted to suit Brazil's unique circumstances, leveraging the nation's vast potential for different forms of hydrogen production.
+  id: doi-10-29327-vii-sencir-semana-nacional-de-engenharia-nuclear-e-da-energia-e-ciencias-das-radiacoes-449507-845712
+  doi: 10.29327/vii-sencir-semana-nacional-de-engenharia-nuclear-e-da-energia-e-ciencias-das-radiacoes-449507.845712
+  pesquisadores:
+  - douglas-oliveira
+- titulo: IMPACTOS ECONÔMICOS E AMBIENTAIS DA IMPLEMENTAÇÃO DE UM MERCADO DE CARBONO REGULAMENTADO NAS INDÚSTRIAS DE MINERAÇÃO E SIDERURGIA NO BRASIL - ESTUDO DE CASO
+  autores:
+  - Maria Luiza SIlvia Gonçalves
+  - Antonella Lombardi Costa
+  - Carlos Eduardo Velasquez
+  - Gustavo Moura
+  - Douglas Silva
+  ano: 2024
+  tipo: congresso
+  veiculo: Anais da Semana Nacional de Engenharia Nuclear e da Energia e Ciências das Radiações
+  acesso_aberto: true
+  url_oa: https://static.even3.com/anais/952965.pdf?v=639024601552451809
+  citacoes: 0
+  resumo: As mudanças climáticas e seus impactos representam desafios complexos para o século XXI, sendo amplamente atribuídas às emissões de gases de efeito estufa (GEE) provenientes de ativida des humanas. O Brasil, um dos maiores emissores de GEE no cenário global, estabeleceu um compromisso de redução de emissões de 53% até 2030. No entanto, o país continua a enfrentar obstáculos substanciais, evidenciados pelos persistentes altos níveis de emissões e pela implementação ineficaz de políticas climáticas robustas e abrangentes. Dentre as principais fontes emissoras, destacam-se as indústrias de mineração e siderurgia, que representam uma parcela significativa das emissões nacionais de GEE. Nesse contexto, a adoção de um mercado de carbono regulado, análogo ao Sistema de Comércio de Emissões da União Europeia (EU ETS), é considerada uma abordagem estratégica promissora para a mitigação desse desafio. A partir de uma análise comparativa baseada no ano de 2025, verificou-se que três empresas representativas desses setores industriais alcançaram reduções em suas emissões de 9,64%, 9,69%, e 12,11%, respectivamente, até 2030. A criação de um sistema de mercado de carbono que incorpore mecanismos de teto e comércio de emissões apresenta o potencial de induzir uma redução progressiva das emissões, além de promover práticas industriais mais sustentáveis e acelerar a transição para uma economia de baixo carbono.
+  id: doi-10-29327-vii-sencir-semana-nacional-de-engenharia-nuclear-e-da-energia-e-ciencias-das-radiacoes-449507-952965
+  doi: 10.29327/vii-sencir-semana-nacional-de-engenharia-nuclear-e-da-energia-e-ciencias-das-radiacoes-449507.952965
+  pesquisadores:
+  - douglas-oliveira
+- titulo: 'INTEGRATING HYDROGEN INTO THE ENERGY MATRIX: A STRATEGIC ANALYSIS FOR SUSTAINABLE PLANNING IN MINAS GERAIS'
+  autores:
+  - Douglas Silva
+  - Antonella Lombardi Costa
+  - Carlos Eduardo Velasquez
+  - Maria Luiza SIlvia Gonçalves
+  ano: 2024
+  tipo: congresso
+  veiculo: Anais da Semana Nacional de Engenharia Nuclear e da Energia e Ciências das Radiações
+  acesso_aberto: true
+  url_oa: https://static.even3.com/anais/858439.pdf?v=639024598500164181
+  citacoes: 1
+  resumo: This article addresses the urgent global need to shift away from fossil fuels towards cleaner energy sources, aligning with the transition to a low-carbon economy. It underscores hydrogen as a highly promising alternative due to its potential to significantly reduce greenhouse gases (GHG) emissions. With increasing investments and research aimed at improving its economic viability, various methods of hydrogen production are available, forming what is known as the "hydrogen rainbow". Green hydrogen, produced through water electrolysis powered by renewable energy sources (RES), emerges as a leading candidate for achieving a low-carbon economy. However, effective storage and transportation methods are crucial for determining the final cost and competitiveness of hydrogen. As countries strive for a lowcarbon future, continuous research and development efforts are underway to enhance hydrogen's competitiveness compared to fossil fuels. The geographical focus on Minas Gerais is motivated by its abundant solar energy resources, offering a prime opportunity for green hydrogen production. Through planning and strategic execution, the study aims to construct a comprehensive hydrogen supply chain in Minas Gerais, integrating infrastructure development for renewable energy installations and the hydrogen route. Leveraging simulations conducted using HOMER Pro software, which bring economic optimization and efficient integration of solar and wind systems for hydrogen production, the study seeks to optimize the economic viability of green hydrogen projects by quantifying the economic benefits and environmental impacts, thereby providing actionable insights for decision-making towards a sustainable energy transition. After evaluating the wind and solar potential of the state, it became evident that solar power holds greater potential compared to wind power. As a result, the projects outlined in the article prioritize the production of green hydrogen using solar energy. By showcasing multiple economically viable projects designed to replace fossil fuels across various societal sectors, the article highlights the significant potential of green hydrogen production in Minas Gerais. Leveraging the state's abundant solar resources and optimized project designs generated through software, these initiatives aim to address the growing demand for clean energy while mitigating environmental impact.
+  id: doi-10-29327-vii-sencir-semana-nacional-de-engenharia-nuclear-e-da-energia-e-ciencias-das-radiacoes-449507-858439
+  doi: 10.29327/vii-sencir-semana-nacional-de-engenharia-nuclear-e-da-energia-e-ciencias-das-radiacoes-449507.858439
+  pesquisadores:
+  - douglas-oliveira
+- titulo: NEUTRONIC EVALUATION OF ADVANCED FUELS FOR SYSTEM-INTEGRATED MODULAR ADVANCED REACTOR (SMART)
+  autores:
+  - Douglas Silva
+  - Carlos Eduardo Velasquez
+  - Claubia Pereira
+  - Clarysson Alberto Melo da Silva
+  ano: 2024
+  tipo: congresso
+  veiculo: Anais da Semana Nacional de Engenharia Nuclear e da Energia e Ciências das Radiações
+  acesso_aberto: true
+  url_oa: https://static.even3.com/anais/898259.pdf?v=639024537233386116
+  citacoes: 0
+  resumo: In contemporary society, energy production stands as a crucial focal point, driven by humanity's heavy reliance on energy sources. However, the pressing concerns regarding environmental ramifications associated with energy generation, especially in the context of global warming and climate change, have taken center stage. Consequently, numerous nations are actively pursuing carbon-neutral energy solutions and investing in pioneering technologies. Among these solutions, nuclear energy emerges as a promising carbon-zero source, with innovations like Small Modular Reactors (SMRs) gaining prominence due to their potential to complement intermittent renewable energy sources. SMRs, exemplified by the SMART reactor developed by KAERI, offer streamlined systems and quicker construction compared to conventional nuclear plants. SMART serves multiple purposes including electricity generation, heating, desalination, and industrial process heat. Its advanced design has undergone thorough safety and performance testing, affirming its reliability. In conjunction with small modular reactors (SMRs), significant advancements have been made in the development of advanced fuels over recent decades. These fuels possess characteristics capable of addressing existing deficiencies and enabling the creation of more economically viable nuclear systems equipped with inherently designed safety features. These materials offer enhanced safety and improved economics for nuclear reactors, allowing for longer operational lifespans under higher levels of neutron irradiation. Moreover, they enable higher operating temperatures and exhibit greater resistance to aggressive corrosive environments, thereby enhancing overall reactor performance and durability. Even the predominant fuel utilized in light water reactor (LWR) systems is Uranium Dioxide (UO2), there is a notable increase in research investments directed towards exploring alternative fuels. Notably, Uranium Mononitride (UN) and Uranium Carbide (UC) offer advantages such as increased burnup capabilities and higher thermal conductivities, while Uranium Silicide (U3Si2) demonstrates superior resistance to Reactivity-Initiated Accidents (RIAs). This study delves into an evaluation of the neutronic behavior of SMART reactor under different fuel configurations, using UO2, UN, UC, and U3Si2 with similar enrichment levels. By analyzing various neutronic parameters, our aim is to offer comprehensive insights into the efficacy and safety of different fuels for energy generation in SMRs. This research endeavor seeks to elucidate the impact of fuel variations on neutron parameters, thereby providing valuable guidance for future reactor design and operational considerations in the context of SMRs.
+  id: doi-10-29327-9786527209867-898259
+  doi: 10.29327/9786527209867.898259
+  pesquisadores:
+  - douglas-oliveira
