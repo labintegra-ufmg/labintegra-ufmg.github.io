@@ -13,5 +13,3 @@ areas:
 - Sustainability and Climate Change Governance
 - Energy, Environment, Economic Growth
 ---
-
-
