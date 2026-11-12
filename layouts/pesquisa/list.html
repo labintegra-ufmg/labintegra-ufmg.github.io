@@ -1,0 +1,7 @@
+{{ define "main" }}
+<section class="section"><div class="container">
+  <h1 class="section-title">{{ .Title }}</h1>
+  {{ with .Content }}<div class="prose">{{ . }}</div>{{ end }}
+  <div class="cards" style="margin-top:2rem">{{ partial "linhas.html" . }}</div>
+</div></section>
+{{ end }}

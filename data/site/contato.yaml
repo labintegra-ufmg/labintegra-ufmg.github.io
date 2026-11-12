@@ -1,0 +1,18 @@
+email: "laboratorio_Energia@outlook.com"
+coordenacao_email: ""
+endereco:
+  pt-br:
+    - "Escola de Engenharia"
+    - "Universidade Federal de Minas Gerais"
+    - "Av. Antônio Carlos, 6627, Bloco 4 – Pampulha"
+    - "Belo Horizonte – MG – CEP 31270-901"
+  en:
+    - "School of Engineering"
+    - "Federal University of Minas Gerais (UFMG)"
+    - "Av. Antônio Carlos, 6627, Building 4 – Pampulha"
+    - "Belo Horizonte – MG – Brazil – ZIP 31270-901"
+mapa: "https://www.openstreetmap.org/export/embed.html?bbox=-43.9720%2C-19.8760%2C-43.9560%2C-19.8640&layer=mapnik&marker=-19.8700%2C-43.9645"
+mapa_link: "https://www.google.com/maps/search/?api=1&query=Escola+de+Engenharia+UFMG+Av.+Ant%C3%B4nio+Carlos+6627+Belo+Horizonte"
+links:
+  - { nome: "UFMG", url: "https://ufmg.br" }
+  - { nome: "Escola de Engenharia", url: "https://eng.ufmg.br" }

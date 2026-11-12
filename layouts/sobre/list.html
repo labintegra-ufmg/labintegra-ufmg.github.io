@@ -1,0 +1,36 @@
+{{ define "main" }}
+{{ $cit := 0 }}
+{{ $pubs := partial "pubs.html" . }}
+{{ range $pubs }}{{ $cit = add $cit (int (.citacoes | default 0)) }}{{ end }}
+{{ $team := where .Site.RegularPages "Section" "equipe" }}
+<section class="section"><div class="container narrow">
+  <h1 class="section-title">{{ .Title }}</h1>
+  <div class="prose">{{ .Content }}</div>
+</div></section>
+
+<section class="section section-alt"><div class="container">
+  <h2 class="section-title">{{ i18n "ab_numbers" }}</h2>
+  <div class="stats">
+    <div class="stat"><b>{{ len $team }}</b><span>{{ i18n "ab_researchers" }}</span></div>
+    <div class="stat"><b>{{ len $pubs }}</b><span>{{ i18n "ab_pubs" }}</span></div>
+    <div class="stat"><b>{{ $cit }}</b><span>{{ i18n "ab_cites" }}</span></div>
+    <div class="stat"><b>{{ len hugo.Data.site.linhas }}</b><span>{{ i18n "ab_lines" }}</span></div>
+  </div>
+</div></section>
+
+{{ $lead := where $team "Params.categoria" "professor" }}
+{{ if $lead }}
+<section class="section"><div class="container">
+  <h2 class="section-title">{{ i18n "ab_lead" }}</h2>
+  <div class="cards">
+    {{ range $lead }}
+    <a class="card card-link" href="{{ .RelPermalink }}">
+      <h3>{{ .Title }}</h3>
+      <p>{{ .Params.cargo }}</p>
+    </a>
+    {{ end }}
+  </div>
+  <p style="margin-top:1.5rem"><a class="btn btn-primary" href="{{ "/equipe/" | relLangURL }}">{{ i18n "ab_team" }}</a></p>
+</div></section>
+{{ end }}
+{{ end }}

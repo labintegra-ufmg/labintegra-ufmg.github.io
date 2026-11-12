@@ -1,20 +1,67 @@
-- icone: "⚡"
+- id: "planejamento-energetico"
+  icone: "&#9889;"
   titulo: { pt-br: "Planejamento Energético", en: "Energy Planning" }
   descricao:
     pt-br: "Modelagem e análise de sistemas energéticos para apoiar decisões de longo prazo."
     en: "Modeling and analysis of energy systems to support long-term decisions."
-- icone: "☀️"
+  intro:
+    pt-br: "O planejamento energético reúne métodos quantitativos para responder a perguntas como: quanta energia será necessária, por quais fontes e a que custo econômico, ambiental e social. A linha desenvolve modelos de otimização, simulação e previsão de demanda para apoiar a expansão da oferta, a avaliação de cenários e a formulação de políticas públicas."
+    en: "Energy planning brings together quantitative methods to answer questions such as: how much energy will be needed, from which sources, and at what economic, environmental and social cost. This line develops optimization, simulation and demand-forecasting models to support supply expansion, scenario assessment and public policy design."
+  topicos:
+    pt-br: ["Modelagem e otimização da expansão de sistemas energéticos", "Previsão de demanda e de carga elétrica", "Análise de cenários e tratamento de incertezas", "Avaliação técnico-econômica e ambiental de alternativas", "Planejamento integrado de recursos e políticas energéticas"]
+    en: ["Energy system modeling and expansion optimization", "Demand and electric load forecasting", "Scenario analysis and uncertainty treatment", "Techno-economic and environmental assessment of alternatives", "Integrated resource planning and energy policy"]
+  objetivos:
+    pt-br: ["Desenvolver e aplicar modelos para apoiar decisões de longo prazo no setor de energia.", "Avaliar trajetórias de oferta e demanda sob diferentes cenários.", "Gerar evidências para políticas públicas e para o planejamento do setor."]
+    en: ["Develop and apply models to support long-term decisions in the energy sector.", "Assess supply and demand pathways under different scenarios.", "Provide evidence for public policy and sector planning."]
+  palavras: ["energy planning", "energy system", "energy model", "power system", "expansion planning", "scenario", "optimization", "forecast", "demand", "planejamento", "previsão", "otimização", "cenário"]
+
+- id: "energias-renovaveis"
+  icone: "&#9728;&#65039;"
   titulo: { pt-br: "Energias Renováveis", en: "Renewable Energy" }
   descricao:
     pt-br: "Integração de fontes solar, eólica, hídrica e biomassa ao sistema energético."
     en: "Integration of solar, wind, hydro and biomass sources into the energy system."
-- icone: "🌱"
+  intro:
+    pt-br: "A expansão das fontes renováveis (solar, eólica, hídrica e bioenergia) muda a forma como a energia é produzida, transportada e consumida. A linha estuda o potencial, o desempenho e a inserção dessas fontes no sistema, considerando variabilidade, complementaridade entre fontes e viabilidade técnica e econômica."
+    en: "The expansion of renewable sources (solar, wind, hydro and bioenergy) is changing how energy is produced, transported and consumed. This line studies the potential, performance and grid integration of these sources, considering variability, complementarity between sources, and technical and economic feasibility."
+  topicos:
+    pt-br: ["Energia solar fotovoltaica", "Energia eólica", "Hidroeletricidade e complementaridade entre fontes renováveis", "Bioenergia e biocombustíveis", "Avaliação de potencial e de recursos energéticos", "Variabilidade e previsão de geração"]
+    en: ["Solar photovoltaic energy", "Wind energy", "Hydropower and complementarity between renewable sources", "Bioenergy and biofuels", "Resource and potential assessment", "Generation variability and forecasting"]
+  objetivos:
+    pt-br: ["Avaliar o potencial e o desempenho de fontes renováveis em diferentes escalas.", "Estudar a inserção de geração renovável variável no sistema elétrico.", "Formar pessoas capacitadas para a expansão sustentável da oferta de energia."]
+    en: ["Assess the potential and performance of renewable sources at different scales.", "Study the integration of variable renewable generation into the power system.", "Train professionals for the sustainable expansion of energy supply."]
+  palavras: ["renewable", "solar", "photovoltaic", "wind", "hydropower", "hydroelectric", "biomass", "bioenergy", "biofuel", "biogas", "renovável", "eólica", "fotovoltaica", "biomassa", "hidrelétric"]
+
+- id: "transicao-baixo-carbono"
+  icone: "&#127793;"
   titulo: { pt-br: "Transição Energética de Baixo Carbono", en: "Low-Carbon Energy Transition" }
   descricao:
     pt-br: "Caminhos tecnológicos e políticas para a descarbonização da matriz energética."
     en: "Technological pathways and policies for decarbonizing the energy mix."
-- icone: "🔌"
+  intro:
+    pt-br: "A transição energética de baixo carbono busca reduzir as emissões do setor de energia sem comprometer a segurança do suprimento e a acessibilidade. A linha analisa rotas tecnológicas, como hidrogênio, energia nuclear, captura de carbono, eletrificação e eficiência energética, e os instrumentos de política necessários para a descarbonização da matriz."
+    en: "The low-carbon energy transition aims to reduce emissions from the energy sector without compromising supply security and affordability. This line analyzes technological routes, such as hydrogen, nuclear power, carbon capture, electrification and energy efficiency, and the policy instruments needed to decarbonize the energy mix."
+  topicos:
+    pt-br: ["Hidrogênio de baixo carbono", "Energia nuclear na matriz de baixo carbono", "Eletrificação e eficiência energética", "Captura, uso e armazenamento de carbono", "Emissões, mitigação e políticas climáticas"]
+    en: ["Low-carbon hydrogen", "Nuclear power in a low-carbon energy mix", "Electrification and energy efficiency", "Carbon capture, utilization and storage", "Emissions, mitigation and climate policy"]
+  objetivos:
+    pt-br: ["Comparar rotas tecnológicas de descarbonização do ponto de vista técnico, econômico e ambiental.", "Quantificar emissões e custos de mitigação em diferentes cenários.", "Subsidiar políticas e estratégias de transição energética."]
+    en: ["Compare decarbonization pathways from technical, economic and environmental perspectives.", "Quantify emissions and mitigation costs under different scenarios.", "Support energy transition policies and strategies."]
+  palavras: ["low-carbon", "low carbon", "decarbon", "emission", "climate", "net zero", "net-zero", "hydrogen", "carbon capture", "nuclear", "energy transition", "transição", "descarboniz", "hidrogênio", "emissões"]
+
+- id: "integracao-de-sistemas"
+  icone: "&#128268;"
   titulo: { pt-br: "Integração de Sistemas", en: "Systems Integration" }
   descricao:
     pt-br: "Integração entre setores, redes e tecnologias para um sistema mais eficiente e resiliente."
     en: "Integration across sectors, grids and technologies for a more efficient and resilient system."
+  intro:
+    pt-br: "Sistemas energéticos eficientes e resilientes dependem da integração entre redes, setores e tecnologias: eletricidade, calor, gás, transporte e armazenamento. A linha investiga o acoplamento de setores, o papel do armazenamento e da flexibilidade, e a operação coordenada de recursos distribuídos."
+    en: "Efficient and resilient energy systems depend on the integration of grids, sectors and technologies: electricity, heat, gas, transport and storage. This line investigates sector coupling, the role of storage and flexibility, and the coordinated operation of distributed resources."
+  topicos:
+    pt-br: ["Acoplamento de setores (sector coupling)", "Armazenamento de energia e flexibilidade", "Redes inteligentes e microrredes", "Recursos energéticos distribuídos", "Sistemas híbridos e multienergia", "Resiliência e segurança do suprimento"]
+    en: ["Sector coupling", "Energy storage and flexibility", "Smart grids and microgrids", "Distributed energy resources", "Hybrid and multi-energy systems", "Resilience and security of supply"]
+  objetivos:
+    pt-br: ["Modelar a interação entre setores energéticos, redes e tecnologias.", "Avaliar o valor do armazenamento e da flexibilidade para o sistema.", "Propor estratégias de operação e planejamento que aumentem a resiliência."]
+    en: ["Model the interaction between energy sectors, grids and technologies.", "Assess the value of storage and flexibility for the system.", "Propose operation and planning strategies that increase resilience."]
+  palavras: ["integration", "sector coupling", "storage", "battery", "smart grid", "microgrid", "grid", "hybrid", "flexibility", "distributed", "resilience", "integração", "armazenamento", "rede"]

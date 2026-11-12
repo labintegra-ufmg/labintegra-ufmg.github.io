@@ -1,0 +1,83 @@
+{{ define "main" }}
+{{ $lang := .Lang }}
+{{ $id := .Params.linha }}
+{{ $L := dict }}
+{{ range hugo.Data.site.linhas }}{{ if eq .id $id }}{{ $L = . }}{{ end }}{{ end }}
+{{ $pubs := partial "pubs.html" . }}
+{{ $kw := $L.palavras | default slice }}
+{{ $matched := slice }}
+{{ range $pubs }}
+  {{ $hay := lower (printf "%s %s" .titulo (.resumo | default "")) }}
+  {{ $hit := false }}
+  {{ range $kw }}{{ if strings.Contains $hay (lower .) }}{{ $hit = true }}{{ end }}{{ end }}
+  {{ if $hit }}{{ $matched = $matched | append (dict "p" . "c" (int (.citacoes | default 0))) }}{{ end }}
+{{ end }}
+{{ $top := first 5 (sort $matched "c" "desc") }}
+{{ $ids := slice }}
+{{ range $matched }}{{ range .p.pesquisadores }}{{ $ids = $ids | append . }}{{ end }}{{ end }}
+{{ $ids = $ids | uniq }}
+
+<section class="section">
+  <div class="container narrow">
+    <p><a href="{{ "/pesquisa/" | relLangURL }}">&larr; {{ i18n "ln_back" }}</a></p>
+    <div class="ln-head">
+      <div class="ln-icon">{{ $L.icone | safeHTML }}</div>
+      <div>
+        <h1 class="section-title">{{ .Title }}</h1>
+        <p class="lead">{{ index $L.intro $lang }}</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section-alt">
+  <div class="container">
+    <h2 class="section-title">{{ i18n "ln_top" }}</h2>
+    <p class="section-sub">{{ i18n "ln_top_sub" }}</p>
+    {{ if $top }}
+      <div class="thumb-grid">{{ range $top }}{{ partial "pub-thumb.html" .p }}{{ end }}</div>
+    {{ else }}
+      <p class="muted">{{ i18n "ln_none" }}</p>
+    {{ end }}
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="ln-cols">
+      <div>
+        <h2 class="section-title">{{ i18n "ln_topics" }}</h2>
+        <ul class="ln-list">{{ range index $L.topicos $lang }}<li>{{ . }}</li>{{ end }}</ul>
+      </div>
+      <div>
+        <h2 class="section-title">{{ i18n "ln_goals" }}</h2>
+        <ul class="ln-list">{{ range index $L.objetivos $lang }}<li>{{ . }}</li>{{ end }}</ul>
+      </div>
+    </div>
+    {{ with .Content }}<div class="prose" style="margin-top:2rem">{{ . }}</div>{{ end }}
+  </div>
+</section>
+
+{{ if $ids }}
+<section class="section section-alt">
+  <div class="container">
+    <h2 class="section-title">{{ i18n "ln_people" }}</h2>
+    <div class="chips">
+      {{ range $ids }}{{ with $.Site.GetPage (printf "/equipe/%s" .) }}<a class="chip" href="{{ .RelPermalink }}">{{ .Title }}</a>{{ end }}{{ end }}
+    </div>
+  </div>
+</section>
+{{ end }}
+
+{{ if $matched }}
+<section class="section">
+  <div class="container">
+    <details class="ln-all">
+      <summary>{{ i18n "ln_all" }} ({{ len $matched }})</summary>
+      <div class="pub-list" style="margin-top:1.5rem">{{ range sort $matched "c" "desc" }}{{ partial "pub-card.html" .p }}{{ end }}</div>
+    </details>
+    <p style="margin-top:1.5rem"><a class="btn btn-accent" href="{{ "/publicacoes/" | relLangURL }}">{{ i18n "all_pubs" }}</a></p>
+  </div>
+</section>
+{{ end }}
+{{ end }}

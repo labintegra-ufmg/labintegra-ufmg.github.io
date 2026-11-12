@@ -1,0 +1,9 @@
+{{ $lang := .Lang }}
+{{ range hugo.Data.site.linhas }}
+<a class="card card-link" href="{{ printf "/pesquisa/%s/" .id | relLangURL }}">
+  <div class="card-icon">{{ .icone | safeHTML }}</div>
+  <h3>{{ index .titulo $lang }}</h3>
+  <p>{{ index .descricao $lang }}</p>
+  <span class="card-more">{{ i18n "ln_more" }} &rarr;</span>
+</a>
+{{ end }}

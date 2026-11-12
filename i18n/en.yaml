@@ -56,3 +56,26 @@ cited_source: 'Source: OpenAlex (may differ from Google Scholar)'
 profile_aff: Affiliations
 profile_edu: Education
 stats_works: works
+
+ln_more: "View line"
+ln_back: "All lines"
+ln_top: "Most cited publications"
+ln_top_sub: "The five most cited publications in this line (source: OpenAlex)."
+ln_cit: "citations"
+ln_none: "Publications for this line will appear here."
+ln_topics: "Research topics"
+ln_goals: "Goals"
+ln_people: "Researchers"
+ln_all: "All publications in this line"
+ab_numbers: "The lab in numbers"
+ab_researchers: "Researchers"
+ab_pubs: "Publications"
+ab_cites: "Citations"
+ab_lines: "Research lines"
+ab_lead: "Leadership"
+ab_team: "Meet the whole team"
+ct_email: "Lab e-mail"
+ct_address: "Address"
+ct_coord: "Lab head"
+ct_map: "Open map"
+ct_links: "Institutional links"

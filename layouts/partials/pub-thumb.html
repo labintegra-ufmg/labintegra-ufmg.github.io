@@ -1,0 +1,13 @@
+{{ $img := printf "static/images/pubs/%s.jpg" .id }}
+{{ $link := .url_oa | default .url | default "" }}
+{{ if and (not $link) .doi }}{{ $link = printf "https://doi.org/%s" .doi }}{{ end }}
+<a class="thumb" href="{{ $link | default "#" }}" target="_blank" rel="noopener">
+  <div class="thumb-img">
+    {{ if os.FileExists $img }}<img src="{{ printf "/images/pubs/%s.jpg" .id | relURL }}" alt="" loading="lazy">{{ else }}<span class="thumb-ph">{{ .ano }}</span>{{ end }}
+  </div>
+  <div class="thumb-body">
+    <h4>{{ .titulo }}</h4>
+    <p class="muted">{{ .ano }}{{ with .veiculo }} &middot; {{ . }}{{ end }}</p>
+    {{ with .citacoes }}<span class="badge-cit">{{ . }} {{ i18n "ln_cit" }}</span>{{ end }}
+  </div>
+</a>

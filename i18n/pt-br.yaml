@@ -56,3 +56,26 @@ cited_source: 'Fonte: OpenAlex (pode diferir do Google Scholar)'
 profile_aff: Vínculos
 profile_edu: Formação
 stats_works: publicações
+
+ln_more: "Ver linha"
+ln_back: "Todas as linhas"
+ln_top: "Publicações mais citadas"
+ln_top_sub: "As cinco publicações mais citadas desta linha (fonte: OpenAlex)."
+ln_cit: "citações"
+ln_none: "As publicações desta linha aparecerão aqui."
+ln_topics: "Temas de pesquisa"
+ln_goals: "Objetivos"
+ln_people: "Pesquisadores"
+ln_all: "Todas as publicações desta linha"
+ab_numbers: "O laboratório em números"
+ab_researchers: "Pesquisadores"
+ab_pubs: "Publicações"
+ab_cites: "Citações"
+ab_lines: "Linhas de pesquisa"
+ab_lead: "Coordenação"
+ab_team: "Conheça toda a equipe"
+ct_email: "E-mail do laboratório"
+ct_address: "Endereço"
+ct_coord: "Coordenação"
+ct_map: "Abrir mapa"
+ct_links: "Links institucionais"

@@ -54,13 +54,7 @@
     <h2 class="section-title">{{ i18n "lines_title" }}</h2>
     <p class="section-sub">{{ i18n "lines_sub" }}</p>
     <div class="cards">
-      {{ range hugo.Data.site.linhas }}
-      <article class="card">
-        <div class="card-icon">{{ .icone }}</div>
-        <h3>{{ index .titulo $.Lang }}</h3>
-        <p>{{ index .descricao $.Lang }}</p>
-      </article>
-      {{ end }}
+      {{ partial "linhas.html" . }}
     </div>
   </div>
 </section>

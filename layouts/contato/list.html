@@ -1,0 +1,38 @@
+{{ define "main" }}
+{{ $c := hugo.Data.site.contato }}
+{{ $lang := .Lang }}
+<section class="section"><div class="container">
+  <h1 class="section-title">{{ .Title }}</h1>
+  <div class="ct-grid" style="margin-top:1.5rem">
+    <div class="card">
+      <h3>{{ i18n "ct_email" }}</h3>
+      <p><a href="mailto:{{ $c.email }}">{{ $c.email }}</a></p>
+    </div>
+    <div class="card">
+      <h3>{{ i18n "ct_address" }}</h3>
+      <p>{{ range index $c.endereco $lang }}{{ . }}<br>{{ end }}</p>
+    </div>
+    {{ with $.Site.GetPage "/equipe/carlos-velasquez" }}
+    <div class="card">
+      <h3>{{ i18n "ct_coord" }}</h3>
+      <p><a href="{{ .RelPermalink }}">{{ .Title }}</a><br><span class="muted">{{ .Params.cargo }}</span></p>
+      <p>
+        {{ with $c.coordenacao_email }}<a href="mailto:{{ . }}">{{ . }}</a><br>{{ end }}
+        {{ with .Params.lattes }}<a href="{{ . }}" target="_blank" rel="noopener">Lattes</a>{{ end }}
+        {{ with .Params.researchgate }} &middot; <a href="{{ . }}" target="_blank" rel="noopener">ResearchGate</a>{{ end }}
+      </p>
+    </div>
+    {{ end }}
+  </div>
+
+  <div class="ct-map" style="margin-top:2rem">
+    <iframe src="{{ $c.mapa }}" loading="lazy" title="{{ i18n "ct_address" }}"></iframe>
+    <p><a href="{{ $c.mapa_link }}" target="_blank" rel="noopener">{{ i18n "ct_map" }} &rarr;</a></p>
+  </div>
+
+  <div class="prose" style="margin-top:2rem">{{ .Content }}</div>
+
+  <h2 class="section-title" style="margin-top:2rem">{{ i18n "ct_links" }}</h2>
+  <div class="chips">{{ range $c.links }}<a class="chip" href="{{ .url }}" target="_blank" rel="noopener">{{ .nome }}</a>{{ end }}</div>
+</div></section>
+{{ end }}
