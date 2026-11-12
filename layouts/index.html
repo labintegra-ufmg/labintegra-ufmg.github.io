@@ -11,18 +11,30 @@
       </div>
     </div>
 
-    {{ with site.Data.site.destaques }}
+        {{ $pubs := partial "pubs.html" . }}
+    {{ $slides := slice }}
+    {{ range site.Data.site.destaques }}
+      {{ $slides = $slides | append (dict "tipo" .tipo "data" .data "titulo" (index .titulo $.Lang) "texto" (index .texto $.Lang) "link" (.link | default "")) }}
+    {{ end }}
+    {{ range first 3 $pubs }}
+      {{ $l := .url | default "" }}
+      {{ if and (not $l) .doi }}{{ $l = printf "https://doi.org/%s" .doi }}{{ end }}
+      {{ $slides = $slides | append (dict "tipo" "publicacao" "data" (string .ano) "titulo" .titulo "texto" (printf "%s · %v" (.veiculo | default "") .ano) "link" $l) }}
+    {{ end }}
+
+    {{ with $slides }}
     <aside class="panel" data-carousel data-interval="6000" aria-roledescription="carousel" aria-label="{{ i18n "highlights" }}">
       <p class="panel-title">{{ i18n "highlights" }}</p>
       <div class="slides" aria-live="polite">
         {{ range $i, $d := . }}
+        {{ $l := $d.link }}{{ if and $l (not (hasPrefix $l "http")) }}{{ $l = $l | relLangURL }}{{ end }}
         <article class="slide{{ if eq $i 0 }} active{{ end }}">
           <span class="tag tag-{{ $d.tipo }}">{{ i18n (printf "tag_%s" $d.tipo) }}</span>
-          <h3>{{ index $d.titulo $.Lang }}</h3>
-          <p>{{ index $d.texto $.Lang }}</p>
+          <h3>{{ $d.titulo }}</h3>
+          <p>{{ $d.texto }}</p>
           <div class="slide-foot">
             <time>{{ $d.data }}</time>
-            {{ if $d.link }}<a href="{{ $d.link | relLangURL }}">{{ i18n "read_more" }} →</a>{{ end }}
+            {{ if $l }}<a href="{{ $l }}">{{ i18n "read_more" }} →</a>{{ end }}
           </div>
         </article>
         {{ end }}
@@ -56,7 +68,12 @@
 <section class="section section-alt">
   <div class="container">
     <h2 class="section-title">{{ i18n "latest_title" }}</h2>
-    <p class="muted">{{ i18n "latest_empty" }}</p>
+    {{ with first 3 (partial "pubs.html" .) }}
+      <div class="pub-list" style="margin-top:2rem">{{ range . }}{{ partial "pub-card.html" . }}{{ end }}</div>
+      <p style="margin-top:1.5rem"><a class="btn btn-accent" href="{{ "/publicacoes/" | relLangURL }}">{{ i18n "all_pubs" }}</a></p>
+    {{ else }}
+      <p class="muted">{{ i18n "latest_empty" }}</p>
+    {{ end }}
   </div>
 </section>
 

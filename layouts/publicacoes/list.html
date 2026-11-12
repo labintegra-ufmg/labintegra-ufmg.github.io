@@ -1,0 +1,32 @@
+{{ define "main" }}
+{{ $pubs := partial "pubs.html" . }}
+{{ $anos := slice }}{{ $tipos := slice }}
+{{ range $pubs }}
+  {{ if not (in $anos (string .ano)) }}{{ $anos = $anos | append (string .ano) }}{{ end }}
+  {{ $t := .tipo | default "outro" }}
+  {{ if not (in $tipos $t) }}{{ $tipos = $tipos | append $t }}{{ end }}
+{{ end }}
+
+<section class="page-hero"><div class="container"><h1>{{ .Title }}</h1></div></section>
+<section class="section">
+  <div class="container">
+    {{ .Content }}
+    <div class="filters" role="search">
+      <input type="search" id="pub-q" placeholder="{{ i18n "search_placeholder" }}" aria-label="{{ i18n "search" }}">
+      <select id="pub-year" aria-label="{{ i18n "filter_year" }}">
+        <option value="">{{ i18n "all_years" }}</option>
+        {{ range $anos }}<option value="{{ . }}">{{ . }}</option>{{ end }}
+      </select>
+      <select id="pub-type" aria-label="{{ i18n "filter_type" }}">
+        <option value="">{{ i18n "all_types" }}</option>
+        {{ range $tipos }}<option value="{{ . }}">{{ i18n (printf "tipo_%s" .) }}</option>{{ end }}
+      </select>
+    </div>
+    <p class="count" aria-live="polite"><span id="pub-n">{{ len $pubs }}</span> {{ i18n "results" }}</p>
+    <div class="pub-list" id="pub-list">
+      {{ range $pubs }}{{ partial "pub-card.html" . }}{{ end }}
+    </div>
+    <p id="pub-empty" class="muted" hidden>{{ i18n "no_results" }}</p>
+  </div>
+</section>
+{{ end }}

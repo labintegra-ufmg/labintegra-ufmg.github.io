@@ -103,3 +103,27 @@ a{color:var(--c-primary)}
 .panel-ctrl .dot{width:10px;height:10px;padding:0;border-radius:50%;background:rgba(255,255,255,.35);border:0}
 .panel-ctrl .dot.active{background:var(--c-accent)}
 @media(max-width:900px){.hero-grid{grid-template-columns:1fr;gap:2rem}}
+
+/* Publicações */
+.filters{display:grid;grid-template-columns:2fr 1fr 1fr;gap:.8rem;margin-bottom:.5rem}
+.filters input,.filters select{padding:.65rem .8rem;border:1px solid var(--c-line);border-radius:10px;font:inherit;background:#fff;width:100%}
+.filters input:focus,.filters select:focus{outline:2px solid var(--c-green);border-color:transparent}
+.count{color:var(--c-muted);margin:1rem 0;font-size:.9rem}
+.pub-list{display:grid;gap:1rem}
+.pub{background:#fff;border:1px solid var(--c-line);border-radius:var(--radius);padding:1.2rem 1.4rem;display:flex;gap:1.2rem;transition:.2s}
+.pub[hidden]{display:none}
+.pub:hover{border-color:var(--c-green);box-shadow:0 8px 22px rgba(11,58,91,.08)}
+.pub-thumb{width:110px;flex:none;align-self:flex-start;border:1px solid var(--c-line);border-radius:6px;object-fit:cover}
+.pub-body{flex:1;min-width:0}
+.pub h3{margin:.4rem 0 .3rem;font-size:1.08rem;line-height:1.35}
+.pub h3 a{color:var(--c-primary);text-decoration:none}.pub h3 a:hover{text-decoration:underline}
+.pub-authors{margin:0;color:var(--c-text);font-size:.92rem}
+.pub-venue{margin:.2rem 0 0;color:var(--c-muted);font-size:.88rem}
+.badges{display:flex;gap:.4rem;flex-wrap:wrap}
+.badge{font-size:.68rem;font-weight:700;text-transform:uppercase;letter-spacing:.06em;padding:.15rem .55rem;border-radius:99px;background:var(--c-alt);color:var(--c-primary);border:1px solid var(--c-line)}
+.badge-oa{background:#e3f5ea;color:#1f7a45;border-color:#bfe5cd}
+.badge-cit{background:#fff6dc;color:#8a6200;border-color:#f3dfa0}
+.abstract{margin-top:.7rem;font-size:.93rem}
+.abstract summary{cursor:pointer;color:var(--c-primary);font-weight:600}
+.abstract p{margin:.5rem 0 0;color:var(--c-muted);text-align:justify}
+@media(max-width:700px){.filters{grid-template-columns:1fr}.pub{flex-direction:column}.pub-thumb{width:100%;max-width:200px}}

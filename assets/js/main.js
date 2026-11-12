@@ -28,3 +28,28 @@
   root.addEventListener('focusout', start);
   start();
 })();
+
+(function () {
+  var list = document.getElementById('pub-list');
+  if (!list) return;
+  var items = [].slice.call(list.querySelectorAll('.pub'));
+  var q = document.getElementById('pub-q'), y = document.getElementById('pub-year'),
+      t = document.getElementById('pub-type'), n = document.getElementById('pub-n'),
+      empty = document.getElementById('pub-empty');
+  function apply() {
+    var term = q.value.trim().toLowerCase(), c = 0;
+    items.forEach(function (el) {
+      var ok = (!term || el.dataset.q.indexOf(term) > -1) &&
+               (!y.value || el.dataset.ano === y.value) &&
+               (!t.value || el.dataset.tipo === t.value);
+      el.hidden = !ok;
+      if (ok) c++;
+    });
+    n.textContent = c;
+    empty.hidden = c > 0;
+  }
+  ['input', 'change'].forEach(function (e) {
+    q.addEventListener(e, apply); y.addEventListener(e, apply); t.addEventListener(e, apply);
+  });
+  apply();
+})();

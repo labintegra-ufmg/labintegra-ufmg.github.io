@@ -1,0 +1,13 @@
+{{- $hidden := slice -}}
+{{- range site.Data.publicacoes.ocultas }}{{ $hidden = $hidden | append (lower (string .)) }}{{ end -}}
+{{- $all := (site.Data.publicacoes.manual | default slice) | append (site.Data.publicacoes.auto | default slice) -}}
+{{- $out := slice -}}
+{{- $seen := slice -}}
+{{- range $all -}}
+  {{- $key := lower (string (.doi | default .id)) -}}
+  {{- if and (not (in $hidden $key)) (not (in $seen $key)) -}}
+    {{- $seen = $seen | append $key -}}
+    {{- $out = $out | append . -}}
+  {{- end -}}
+{{- end -}}
+{{- return (sort $out "ano" "desc") -}}

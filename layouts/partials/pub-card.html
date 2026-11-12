@@ -1,0 +1,21 @@
+{{ $href := .url | default "" }}
+{{ if and (not $href) .doi }}{{ $href = printf "https://doi.org/%s" .doi }}{{ end }}
+<article class="pub" data-ano="{{ .ano }}" data-tipo="{{ .tipo }}" data-q="{{ printf "%s %s %s" .titulo (delimit (.autores | default slice) " ") (.veiculo | default "") | lower }}">
+  {{ with .imagem }}<img class="pub-thumb" src="{{ . | relURL }}" alt="" loading="lazy">{{ end }}
+  <div class="pub-body">
+    <div class="badges">
+      <span class="badge">{{ i18n (printf "tipo_%s" (.tipo | default "outro")) }}</span>
+      {{ if .acesso_aberto }}<span class="badge badge-oa">{{ i18n "open_access" }}</span>{{ end }}
+      {{ with .citacoes }}<span class="badge badge-cit">{{ i18n "cited_by" }}: {{ . }}</span>{{ end }}
+    </div>
+    <h3>{{ if $href }}<a href="{{ $href }}" target="_blank" rel="noopener">{{ .titulo }}</a>{{ else }}{{ .titulo }}{{ end }}</h3>
+    <p class="pub-authors">{{ delimit (.autores | default slice) ", " }}</p>
+    <p class="pub-venue">{{ with .veiculo }}<em>{{ . }}</em> · {{ end }}{{ .ano }}</p>
+    {{ with .resumo }}
+    <details class="abstract">
+      <summary>{{ i18n "abstract" }}</summary>
+      <p>{{ . }}</p>
+    </details>
+    {{ end }}
+  </div>
+</article>

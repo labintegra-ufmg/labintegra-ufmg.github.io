@@ -23,3 +23,18 @@ tag_publicacao: Publication
 tag_projeto: Project
 prev: Previous
 next: Next
+search_placeholder: Search by title, author or journal…
+filter_year: Filter by year
+filter_type: Filter by type
+all_types: All types
+results: result(s)
+no_results: No publications found.
+all_pubs: See all publications
+abstract: Abstract
+open_access: Open access
+cited_by: Citations
+tipo_artigo: Article
+tipo_congresso: Conference
+tipo_livro: Book
+tipo_capitulo: Chapter
+tipo_outro: Other
