@@ -2,7 +2,7 @@
 title: Ruan Luzia
 id: ruan-luzia
 categoria: doutorando
-cargo: Researcher
+cargo: Physicist · M.S. and Ph.D. (in progress) in Nuclear Science and Technology and Energy Engineering · UFMG
 ativo: true
 scopus: '58165716600'
 areas:
