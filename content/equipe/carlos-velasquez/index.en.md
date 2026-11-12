@@ -1,0 +1,12 @@
+---
+title: Carlos Eduardo Velasquez Cabrera
+id: carlos-velasquez
+categoria: professor
+cargo: Professor, Ph.D. · Laboratory Head · UFMG
+ativo: true
+orcid: 0000-0002-2960-3150
+lattes: http://lattes.cnpq.br/2694400303783391
+researchgate: https://www.researchgate.net/profile/Carlos_Velasquez_Cabrera
+---
+
+

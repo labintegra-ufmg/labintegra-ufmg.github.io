@@ -1,3 +1,21 @@
+- titulo: 'A Physics-Constrained Super-Resolution Framework for Wind Resource Mapping: Application to Brazil'
+  autores:
+  - José Péricles Freire
+  - Lihki Rubio
+  - Jin Seok Yang
+  - Carlos Eduardo Velasquez
+  ano: 2026
+  tipo: artigo
+  veiculo: Energies
+  acesso_aberto: true
+  url_oa: https://doi.org/10.3390/en19163722
+  citacoes: 0
+  resumo: 'High-resolution wind resource maps are essential for wind farm siting and renewable-energy planning, but national-scale assessment is often limited by sparse meteorological stations and the coarse resolution of reanalysis products. This study introduces a self-supervised Physics-Constrained Super-Resolution CNN (PC-SRCNN) that enhances ERA5 wind fields from 0.25° to 0.025°, for settings lacking a high-resolution, hourly-resolved reference wind field, by embedding kinematic and vertical-profile consistency as soft regularization penalties, without solving the full Navier-Stokes momentum balance. The framework was evaluated against 190 independent INMET stations, alongside interpolation, data-driven, and climatological baselines, using a station-wise bootstrap and the Diebold-Mariano test. The full model reduced the bootstrap MAE from 1.22 to 1.04 m/s relative to native ERA5, a 14.85% improvement confirmed by both tests, and achieved a vertical-profile R2 of 0.90 against baselines below 0.70. Ablation shows physical regularization is not automatically beneficial: a variant constrained only by horizontal kinematics performed significantly worse than ERA5, with gains obtained only when vertical logarithmic-profile consistency was included. All other baselines evaluated were statistically indistinguishable from native ERA5 against station observations. These results indicate that sharper spatial detail alone is insufficient to improve wind-resource estimates unless supported by physically meaningful, vertically consistent constraints.'
+  id: doi-10-3390-en19163722
+  doi: 10.3390/en19163722
+  pesquisadores:
+  - carlos-velasquez
+  - jose-pericles-freire
 - titulo: 'Ambition versus Historically Grounded Transition Feasibility: Structural Constraints in Carbon-Budget Pathways'
   autores:
   - Carlos E Velásquez
@@ -15,6 +33,23 @@
   doi: 10.21203/rs.3.rs-11029336/v1
   pesquisadores:
   - douglas-oliveira
+- titulo: 'Stacked ML-GARCH for Bitcoin Risk Forecasting: A Novel Ensemble Approach for Superior Value-at-Risk Estimation'
+  autores:
+  - Lihki Rubio
+  - Keyla Alba
+  - Carlos E Velásquez
+  - Filipe Ramos
+  ano: 2026
+  tipo: artigo
+  veiculo: Mathematics
+  acesso_aberto: true
+  url_oa: https://www.mdpi.com/2227-7390/14/4/624/pdf?version=1770736895
+  citacoes: 2
+  resumo: Accurately forecasting Bitcoin’s conditional variance is essential for reliable Value-at-Risk (VaR) estimation yet remains challenging due to nonlinear dynamics, volatility clustering, and heavy-tailed return distributions. This study developed a novel stacking ensemble that integrates econometric and machine-learning models through XGBoost meta-learning to produce improved variance forecasts. Hybrid ML–GARCH specifications are incorporated separately to enrich the comparative analysis. All estimators are trained with time-aware cross-validation to ensure temporal coherence and prevent look-ahead bias. Using Bitcoin data from 2014 to 2020, the empirical results show that the stacking ensemble consistently outperforms both standalone and hybrid alternatives in conditional variance forecasting and VaR accuracy, including during periods of severe market stress such as the COVID-19 episode. Residual diagnostics confirm that the ensemble effectively captures persistent temporal dependencies in volatility dynamics. Overall, the proposed methodology offers an innovative and interpretable risk-management tool for financial institutions, combining statistical rigor with the adaptability of machine-learning techniques in digital asset markets.
+  id: doi-10-3390-math14040624
+  doi: 10.3390/math14040624
+  pesquisadores:
+  - carlos-velasquez
 - titulo: 'Technology-Oriented Wind Farm Configuration Selection Using an RFR-Based Turbine Power-Output Surrogate Model: A National-Scale Assessment for Brazil'
   autores:
   - José Péricles Freire
@@ -33,6 +68,8 @@
   doi: 10.3390/en19174167
   pesquisadores:
   - douglas-oliveira
+  - carlos-velasquez
+  - jose-pericles-freire
 - titulo: 'The curtailment cost paradox: Intermittency penalties invert hydrogen production economics in a vre-rich emerging economy'
   autores:
   - Douglas Silva de Oliveira
@@ -48,6 +85,85 @@
   doi: 10.1016/j.ijhydene.2026.156327
   pesquisadores:
   - douglas-oliveira
+  - carlos-velasquez
+- titulo: Analysis of reprocessed fuels inserted into a hybrid fusion-fission system based on the ARC reactor
+  autores:
+  - Karytha Merie Silva Corrêa
+  - Natália Gonçalves Peixoto Lelis Oliveira
+  - Cláubia Pereira
+  - Carlos Eduardo Velasquez
+  ano: 2025
+  tipo: artigo
+  veiculo: Annals of Nuclear Energy
+  acesso_aberto: false
+  citacoes: 1
+  id: doi-10-1016-j-anucene-2025-111291
+  doi: 10.1016/j.anucene.2025.111291
+  pesquisadores:
+  - carlos-velasquez
+- titulo: 'Decarbonizing the steel industry: a case study in Brazil utilizing nuclear-renewable hybrid energy systems for electricity and hydrogen supply'
+  autores:
+  - Gebes Vanderlei Parente Santos
+  - Carlos Eduardo Velasquez
+  ano: 2025
+  tipo: artigo
+  veiculo: Clean Technologies and Environmental Policy
+  acesso_aberto: false
+  citacoes: 2
+  id: doi-10-1007-s10098-025-03286-7
+  doi: 10.1007/s10098-025-03286-7
+  pesquisadores:
+  - carlos-velasquez
+- titulo: Evaluation of different external neutron sources for a hybrid system based on the SEALER reactor
+  autores:
+  - João P. Cunha Melo
+  - Lucas Vinícius Gonçalves Chaves
+  - Samuel V.F. Silva
+  - J.R.C. Piqueira M.E. Taqueda J.P. Duarte
+  - Karytha Merie Silva Corrêa
+  - Natália Gonçalves Peixoto Lelis Oliveira
+  - José Cassimiro
+  - Carlos Eduardo Velasquez
+  - Clarysson A. M. da Silva
+  - Cláubia Pereira
+  ano: 2025
+  tipo: artigo
+  veiculo: Annals of Nuclear Energy
+  acesso_aberto: false
+  citacoes: 2
+  id: doi-10-1016-j-anucene-2025-111234
+  doi: 10.1016/j.anucene.2025.111234
+  pesquisadores:
+  - carlos-velasquez
+- titulo: 'Optimizing wind power forecasting with hybrid neural networks: insights from Brazil'
+  autores:
+  - José Péricles Freire
+  - Lihki Rubio
+  - Carlos Eduardo Velasquez
+  ano: 2025
+  tipo: artigo
+  veiculo: Neural Computing and Applications
+  acesso_aberto: false
+  citacoes: 4
+  id: doi-10-1007-s00521-025-11464-3
+  doi: 10.1007/s00521-025-11464-3
+  pesquisadores:
+  - carlos-velasquez
+  - jose-pericles-freire
+- titulo: Performance Evaluation of Fission Transmutation Layers in ARC Reactor-Based Fusion-Fission Systems
+  autores:
+  - Karytha Merie Silva Corrêa
+  - Cláubia Pereira
+  - Carlos Eduardo Velasquez
+  ano: 2025
+  tipo: artigo
+  veiculo: Brazilian Journal of Physics
+  acesso_aberto: false
+  citacoes: 0
+  id: doi-10-1007-s13538-025-01865-z
+  doi: 10.1007/s13538-025-01865-z
+  pesquisadores:
+  - carlos-velasquez
 - titulo: ESTIMATIVA DA REDUÇÃO DE EMISSÕES DE CO₂ PELA INTRODUÇÃO DE HIDROGÊNIO VERDE NA FROTA DE TRANSPORTE PÚBLICO DE BELO HORIZONTE
   autores:
   - Maria Luiza SIlvia Gonçalves
@@ -80,6 +196,7 @@
   doi: 10.1016/j.seta.2024.104063
   pesquisadores:
   - douglas-oliveira
+  - carlos-velasquez
 - titulo: 'HYDROGEN INTEGRATION IN THE BRAZILIAN ENERGY MATRIX: A COMPREHENSIVE REVIEW OF UTILIZATION TECHNOLOGIES'
   autores:
   - Douglas Silva
@@ -148,3 +265,599 @@
   doi: 10.29327/9786527209867.898259
   pesquisadores:
   - douglas-oliveira
+- titulo: Assessment of alternative nuclear fuel cycles for the Brazilian nuclear energy system
+  autores:
+  - Fidéllis Bitencourt Gonzaga Louzada e Estanislau
+  - Carlos Eduardo Velasquez
+  - Antonella Lombardi Costa
+  - Cláubia Pereira
+  ano: 2023
+  tipo: artigo
+  veiculo: Nuclear Engineering and Design
+  acesso_aberto: false
+  citacoes: 9
+  id: doi-10-1016-j-nucengdes-2023-112692
+  doi: 10.1016/j.nucengdes.2023.112692
+  pesquisadores:
+  - carlos-velasquez
+- titulo: Carbon dioxide life cycle assessment for Brazilian passenger cars fleet towards 2050
+  autores:
+  - Carlos Eduardo Velasquez
+  - Gustavo M.Chaves
+  - Deborah M.Motta
+  - Fidéllis Bitencourt Gonzaga Louzada e Estanislau
+  ano: 2023
+  tipo: artigo
+  veiculo: Renewable and Sustainable Energy Reviews
+  acesso_aberto: false
+  citacoes: 9
+  id: doi-10-1016-j-rser-2023-113952
+  doi: 10.1016/j.rser.2023.113952
+  pesquisadores:
+  - carlos-velasquez
+- titulo: Neutronic evaluation for different external neutron sources in a Small-Subcritical fast reactor
+  autores:
+  - Renato Vinícius A. Marques
+  - Carlos Eduardo Velasquez
+  - Cláubia Pereira
+  ano: 2023
+  tipo: artigo
+  veiculo: Nuclear Engineering and Design
+  acesso_aberto: false
+  citacoes: 6
+  id: doi-10-1016-j-nucengdes-2023-112868
+  doi: 10.1016/j.nucengdes.2023.112868
+  pesquisadores:
+  - carlos-velasquez
+- titulo: 'Radioisotopes for nuclear batteries: an energy analysis'
+  autores:
+  - Krosli Ferreira de Andrade
+  - Cláubia Pereira
+  - Carlos Eduardo Velasquez
+  ano: 2023
+  tipo: artigo
+  veiculo: International Journal of Nuclear Energy Science and Technology
+  acesso_aberto: false
+  citacoes: 2
+  resumo: Long-lasting batteries like Radioisotope Thermoelectric Generator (RTG) nuclear batteries play a crucial role in spacecraft projects, offering lifespans of 14 to 48 years when lithium batteries are unsuitable. Designing RTG nuclear batteries involves considerations of thermal power generated from alpha decay heat energy density, radioisotope half-life, and production costs. This study explores non-proliferation radioisotopes as alternatives to Pu-238 to meet spacecraft exploration requirements, which include a 30-year lifespan, 2 kW of thermal power, and 100 W of electric power. The analysed radioisotopes include 232UO2, 238PuO2, 241AmO2, 233CmO2 and 234CmO2, with production cost assessed per gram. Results indicate that U-232 could enhance end-of-lifetime power supply and is even more cost-effective than the reference Pu-238. Cm-244 emerges as the most economically efficient option in terms of the mass needed to meet power requirements, followed by Cm-243 and U-232. Although Am-241 is pricier than Pu-238, it exhibits a smaller difference between initial and final power levels, making it suitable for longer-duration spacecraft missions.
+  id: doi-10-1504-ijnest-2023-135375
+  doi: 10.1504/ijnest.2023.135375
+  pesquisadores:
+  - carlos-velasquez
+- titulo: Sensitivity analysis for forecasting Brazilian electricity demand using artificial neural networks and hybrid models based on Autoregressive Integrated Moving Average
+  autores:
+  - Ruan Luzia
+  - Lihki Rubio
+  - Carlos Eduardo Velasquez
+  ano: 2023
+  tipo: artigo
+  veiculo: Energy
+  acesso_aberto: false
+  citacoes: 62
+  id: doi-10-1016-j-energy-2023-127365
+  doi: 10.1016/j.energy.2023.127365
+  pesquisadores:
+  - carlos-velasquez
+- titulo: Analysis of time series models for Brazilian electricity demand forecasting
+  autores:
+  - Carlos Eduardo Velasquez
+  - Matheus Zocatelli
+  - Fidéllis Bitencourt Gonzaga Louzada e Estanislau
+  - Victor F. Castro
+  ano: 2022
+  tipo: artigo
+  veiculo: Energy
+  acesso_aberto: true
+  url_oa: https://doi.org/10.2139/ssrn.3962661
+  citacoes: 89
+  id: doi-10-1016-j-energy-2022-123483
+  doi: 10.1016/j.energy.2022.123483
+  pesquisadores:
+  - carlos-velasquez
+- titulo: Estudo do custo social dos impactos à saúde oriundos das emissões da termelétrica a gás natural na região de Ibirité
+  autores:
+  - Bianca Fabiani Capistrano
+  - Fidéllis Bitencourt Gonzaga Louzada e Estanislau
+  - Carlos Eduardo Velasquez
+  ano: 2022
+  tipo: artigo
+  veiculo: Revista Tecnologia e Sociedade
+  acesso_aberto: true
+  url_oa: https://periodicos.utfpr.edu.br/rts/article/download/14641/9100
+  citacoes: 0
+  resumo: A demanda por energia elétrica encontra-se em constante crescimento, visto que está diretamente ligada ao desenvolvimento e modernização da sociedade. Utiliza-se este tipo de energia para iluminação, como força para movimentar motores e máquinas e para o funcionamento de diversos itens elétricos e eletrônicos. Na matriz elétrica Brasileira, apesar da fonte hidrelétrica ser predominante (64,9%), cerca de 9,3% da matriz é composta por termelétricas a gás natural. Neste cenário, encontra-se a termelétrica localizada no município de Ibirité/MG, que utiliza como fonte de energia o gás natural e possui uma capacidade de geração de 226 MW. O presente trabalho analisa os impactos à saúde e a quantificação monetária destes por doenças respiratórias e cardiovasculares que podem ser ocasionadas pelas emissões de poluentes ao redor da usina termelétrica de Ibirité. Tendo em consideração os dados geográficos, meteorológicos e operação da usina para geração de energia elétrica. Para obter os resultados dos impactos gerados, utilizou-se o modelo SIMPACTS (Simplified Approach for Estimating Impacts of Electricity Generation) que considera uma área de 25 km2 ao redor da usina. Este modelo utiliza as características da usina termelétrica (altura da chaminé, velocidade e temperatura do vapor de saída etc.), a emissão de poluentes da usina (SO2, NOX e MP10) e a densidade populacional ao redor da usina, para calcular os custos ocasionados por doenças respiratórias como asma (uso de broncodilatador), sintomas respiratórios crônicos menores, mortalidade infantil e mortalidade aguda.
+  id: doi-10-3895-rts-v18n54-14641
+  doi: 10.3895/rts.v18n54.14641
+  pesquisadores:
+  - carlos-velasquez
+- titulo: Long term comparison between reprocessed nuclear fuel cycles
+  autores:
+  - Fidéllis Bitencourt Gonzaga Louzada e Estanislau
+  - Carlos Eduardo Velasquez
+  - Antonella Lombardi Costa
+  - Cláubia Pereira
+  ano: 2022
+  tipo: artigo
+  veiculo: Brazilian Journal of Radiation Sciences
+  acesso_aberto: true
+  url_oa: https://bjrs.org.br/revista/index.php/REVISTA/article/download/1999/1032
+  citacoes: 0
+  resumo: 'Based on the idea of adopting closed fuel cycle in current pressurized water reactors (PWR) in order to reduce the use of natural uranium and recycle the spent fuel accumulated in the world inventory, this paper aims to compare two closed nuclear fuel cycles simulated at Model for Energy Supply Strategy Alternatives and their General Environmental Impacts (MESSAGE). The nuclear fuel cycles compared are: i) a closed fuel cycle with recovering of plutonium (Pu) to fabricate the mixed oxide (MOX) fuel; ii) a closed fuel cycle with recovering of a transuranic matrix to fabricate the transuranic fuel spiked with depleted uranium (TRU-U)O2. The comparison is based on the Brazilian nuclear energy system. They consider the time frame of 2019-2060 and the introduction of Angra 3 in the system. Advantages and disadvantages of using the strategy of operating with the different nuclear fuel cycles are shown, which include results regarding natural uranium consumption, spent fuel accumulation or utilization, nuclear waste and the nuclear fuel costs for both fuels.'
+  id: doi-10-15392-2319-0612-2022-1999
+  doi: 10.15392/2319-0612.2022.1999
+  pesquisadores:
+  - carlos-velasquez
+- titulo: Water-energy-emissions nexus – an integrated analysis applied to a case study
+  autores:
+  - Leonardo Barrouin Melo
+  - Antonella Lombardi Costa
+  - Fidéllis Bitencourt Gonzaga Louzada e Estanislau
+  - Carlos Eduardo Velasquez
+  - Ângela Fortini
+  - Gustavo Moura
+  ano: 2022
+  tipo: artigo
+  veiculo: International Journal of Sustainable Energy Planning and Management
+  acesso_aberto: true
+  url_oa: https://doi.org/10.54337/ijsepm.7349
+  citacoes: 5
+  resumo: Competition for water use, population growth, territorial expansion for housing, the finitude of fossil fuels, climate change, and the lack of consistent and continuous energy planning are some of the existing problems related to planning and monitoring energy supply systems. This work presents an integrated analysis of the water-energy-emissions nexus using two computational models simultaneously in order to consider a case study for the modeling of hydropower plants. The main results include the reduction in hydropower generation at the end of the study horizon (2019 – 2049) between (-16.8%) and (-7.8%) considering water restriction scenarios. Final electricity demand, in the reference scenario, increased 40.8% and, in alternative scenarios, there was an increase between 63.6% and 89.5% when reductions in the rainfall regime were considered.
+  id: doi-10-54337-ijsepm-7349
+  doi: 10.54337/ijsepm.7349
+  pesquisadores:
+  - carlos-velasquez
+- titulo: Analysis of Time Series Models for Brazilian Electricity Demand Forecasting
+  ano: 2021
+  tipo: artigo
+  id: doi-10-2139-ssrn-3962661
+  doi: 10.2139/ssrn.3962661
+  pesquisadores:
+  - carlos-velasquez
+- titulo: Comparison of spallation and fusion neutron sources in fuel transmutation and regeneration
+  autores:
+  - Graiciany de Paula Barros
+  - Keferson Carvalho
+  - Carlos Eduardo Velasquez
+  - André Augusto Campagnole dos Santos
+  - Vitor Vasconcelos
+  - Daniel Almeida Magalhães Campolina
+  - Cláubia Pereira
+  ano: 2021
+  tipo: artigo
+  veiculo: Annals of Nuclear Energy
+  acesso_aberto: false
+  citacoes: 7
+  id: doi-10-1016-j-anucene-2021-108159
+  doi: 10.1016/j.anucene.2021.108159
+  pesquisadores:
+  - carlos-velasquez
+- titulo: Impactos socioambientais devidos à geração de energia elétrica de carvão mineral no Município de Figueira (Estado do Paraná, Sul do Brasil)
+  autores:
+  - Vinicius G. M. Silva
+  - Fidéllis Bitencourt Gonzaga Louzada e Estanislau
+  - Carlos Eduardo Velasquez
+  ano: 2021
+  tipo: artigo
+  veiculo: Revista Brasileira de Gestão Ambiental e Sustentabilidade
+  acesso_aberto: true
+  url_oa: http://revista.ecogestaobrasil.net/v8n18/v08n18a15.pdf
+  citacoes: 0
+  resumo: Entre as várias fontes de geração de energia elétrica no mundo, as termoelétricas a carvão são as que mais contribuem para a oferta de energia elétrica, entretanto emitem grandes quantidades de poluentes na atmosfera. O presente estudo busca quantificar os danos à saúde devido às emissões dos poluentes produzidas na Termoelétrica a carvão mineral no Município de Figueira, localizada no Estado do Paraná, que tem capacidade de geração elétrica de 20 MW. Este estudo é realizado em duas áreas, no município de Figueira (25 km2) e englobando outros municípios nas proximidades (2.500 km2). Para calcular os impactos socioambientais ocasionados pelo funcionamento da usina, utiliza-se o SIMPACTS, que estima e quantifica os custos de danos ambientais e à saúde pelas emissões dos gases SOx, NOx e de material particulado, além de mostrar sua dispersão em torno da usina. Os danos para o Município de Figueira custam em média US$ 56,60/GWh, atingindo no ano de maior poluição um total de US$ 127,60/GWh. Levando em consideração a região no entorno (2.500 km2), a média dos custos dos impactos pela poluição aumenta para US$ 4.475,50/GWh, com um pico de US$ 17.675,30/GWh, em 2017. Os resultados evidenciam uma disparidade dos impactos entre os anos de maior e menor emissão de poluentes, podendo indicar que um controle rigoroso das emissões pode causar uma redução significativa nos mesmos.
+  id: doi-10-21438-rbgas-2021-081815
+  doi: 10.21438/rbgas(2021)081815
+  pesquisadores:
+  - carlos-velasquez
+- titulo: Integrated analysis of the Brazilian nuclear energy system
+  autores:
+  - Fidéllis Bitencourt Gonzaga Louzada e Estanislau
+  - Antonella Lombardi Costa
+  - Carlos Eduardo Velasquez
+  - Cláubia Pereira
+  ano: 2021
+  tipo: artigo
+  veiculo: International Journal of Energy Research
+  acesso_aberto: true
+  url_oa: https://onlinelibrary.wiley.com/doi/pdfdirect/10.1002/er.6452
+  citacoes: 5
+  resumo: National energy planning aims to develop short to long-term strategies based on a holistic assessment of all available energy sources, guiding trends, and delimiting alternatives to expand the energy segment. In order to maintain the expansion of the electricity supply system while reducing greenhouse gas emissions, it is essential to use alternative low-carbon energy sources. The present work aims to use the modeling tool MESSAGE to analyze and evaluate a system of electricity generation from nuclear sources since nuclear energy is an important complementary option for the national energy mix. Thus, this work assesses in an integrated way the national nuclear energy system from its beginning (1983) until 2050. The use of this modeling tool allows a comprehensive analysis of the energy system including energy demand from domestic resources, energy conversion technologies, money flows, investment requirements, and emissions. Therefore, these results provide a basis to support decision-makers to choose the most appropriate energy mix for national energy planning.
+  id: doi-10-1002-er-6452
+  doi: 10.1002/er.6452
+  pesquisadores:
+  - carlos-velasquez
+- titulo: 'Scenarios of nuclear energy for countries with different options of nuclear fuel cycle: Utilization and perspective'
+  autores:
+  - Carlos Eduardo Velasquez
+  - Fidéllis Bitencourt Gonzaga Louzada e Estanislau
+  - Antonella Lombardi Costa
+  - Maria Auxiliadora F. Veloso
+  - Cláubia Pereira
+  ano: 2021
+  tipo: artigo
+  veiculo: Progress in Nuclear Energy
+  acesso_aberto: false
+  citacoes: 23
+  id: doi-10-1016-j-pnucene-2021-103747
+  doi: 10.1016/j.pnucene.2021.103747
+  pesquisadores:
+  - carlos-velasquez
+- titulo: Assessment of the French nuclear energy system – A case study
+  autores:
+  - Carlos Eduardo Velasquez
+  - Fidéllis Bitencourt Gonzaga Louzada e Estanislau
+  - Antonella Lombardi Costa
+  - Cláubia Pereira
+  ano: 2020
+  tipo: artigo
+  veiculo: Energy Strategy Reviews
+  acesso_aberto: true
+  url_oa: https://www.sciencedirect.com/science/article/pii/S2211467X20300663/pdf
+  citacoes: 18
+  resumo: The country with the highest nuclear power contribution to its energy matrix is France with 72.28%. The French nuclear history reveals that they trust in reprocessing option since an early stage of the nuclear power plants. Therefore, this work is devoted to studying the two options of a fuel cycle, i.e., Open Fuel Cycle (OFC) and Closed Fuel Cycle (CFC) for this country and the economics of each scenario. The assessment begins using the MESSAGE, since the first official registration by the International Atomic Energy Agency (IAEA), which is in 1970 and tries to follow the model until 2016. After that, the MESSAGE adjusts the energy planning to fit best until 2034 remaining the nuclear activity in this country. The results show the best reactor option to supply 50000 MWyr until 2034 using the two fuel cycle models. Finally, it is shown the amount of resources needed to maintain the nuclear power industry in France and justify the French option of the fuel cycle based on the economic results. The results show the use of nuclear resources taking advantage of a closed fuel cycle. The idea is to show the sustainability of a closed fuel cycle, applying this methodology to countries in nuclear development with a different scenario.
+  id: doi-10-1016-j-esr-2020-100513
+  doi: 10.1016/j.esr.2020.100513
+  pesquisadores:
+  - carlos-velasquez
+- titulo: Criticality and depletion analysis of reprocessed fuel spiked with thorium in a PWR core
+  autores:
+  - Victor F. Castro
+  - Carlos Eduardo Velasquez
+  - Cláubia Pereira
+  ano: 2020
+  tipo: artigo
+  veiculo: Nuclear Engineering and Design
+  acesso_aberto: false
+  citacoes: 14
+  id: doi-10-1016-j-nucengdes-2020-110514
+  doi: 10.1016/j.nucengdes.2020.110514
+  pesquisadores:
+  - carlos-velasquez
+- titulo: Tritium Breeder Layer Evaluation of Fusion-Fission Hybrid System
+  autores:
+  - Renato Vinícius A. Marques
+  - Marcia Saturnino
+  - Felipe Terra Martins
+  - Carlos Eduardo Velasquez
+  - Cláubia Pereira
+  - Maria Auxiliadora F. Veloso
+  - Antonella Lombardi Costa
+  ano: 2020
+  tipo: artigo
+  veiculo: Fusion Science & Technology
+  acesso_aberto: false
+  citacoes: 6
+  resumo: Lead-bismuth eutectic is used as a coolant for the fusion-fission hybrid system (FFS) based on a tokamak that enhances the transmutation of transuranic nuclides. However, this coolant does not produce enough tritium to supply the fusion reactions of the system. Therefore, the aim of this work is to evaluate the insertion of tritium breeder layers (TBLs) on the FFS to enhance tritium production. The analyzed materials for tritium production were beryllium, boron, and lithium alloys. The results indicate the most suitable material for tritium production depends on the TBL location. The results also indicate that there is a strong dependency on the position of the TBL affecting the neutronic parameters and nuclide transmutation such as criticality and fuel depletion. The reaction rates for tritium production and fuel composition after a fuel burnup were analyzed using the Monte Carlo N-Particle 5 (MCNP5) and MONTEBURNS codes.
+  id: doi-10-1080-15361055-2019-1704594
+  doi: 10.1080/15361055.2019.1704594
+  pesquisadores:
+  - carlos-velasquez
+- titulo: UK nuclear energy system study from 1956 to 2035
+  autores:
+  - Carlos Eduardo Velasquez
+  - Fidéllis Bitencourt Gonzaga Louzada e Estanislau
+  - Antonella Lombardi Costa
+  - Maria Auxiliadora F. Veloso
+  - Cláubia Pereira
+  ano: 2019
+  tipo: artigo
+  veiculo: Revista Tecnologia e Sociedade
+  acesso_aberto: true
+  url_oa: https://periodicos.utfpr.edu.br/rts/article/download/9647/6444
+  citacoes: 0
+  resumo: The first nuclear reactor built in 1947 had a research purpose, but the first commercial reactor power station was built nine years later at Windscale, England. After that, 45 reactors were built until 1995 for electricity production. Currently, 30 of them are permanently shutdown and 15 are still operational which comprises around 19% of the United Kingdom (UK) energy matrix. Despite the last reactor built in 1995 was a PWR - SIZEWELL-B connected to the grid 23 years ago, the UK government plan to build new generation plants to supply 19 GWe until 2025 and aims to have an additional 16 GWe until 2023. Nevertheless, half of the current capacity should be retired by 2025 and the rest of the AGR generation until 2030. Therefore, the UK nuclear energy system is modeled taking into consideration the retirement and construction of different reactors. The results show the UK nuclear energy system and the reactor transition from old AGRs to a new generation of nuclear reactors. Also, economic features and spent fuel produced due to the nuclear activity up to 2035 are presented.
+  id: doi-10-3895-rts-v15n37-9647
+  doi: 10.3895/rts.v15n37.9647
+  pesquisadores:
+  - carlos-velasquez
+- titulo: Alternative proposal of a small fast sodium reactor concept
+  autores:
+  - Maurício Gilberti
+  - Carlos Eduardo Velasquez
+  - Matheus Liberato Vargas
+  - Felipe Terra Martins
+  - Antonella Lombardi Costa
+  - Maria Auxiliadora F. Veloso
+  - Cláubia Pereira
+  ano: 2018
+  tipo: artigo
+  veiculo: Nuclear Engineering and Design
+  acesso_aberto: false
+  citacoes: 5
+  id: doi-10-1016-j-nucengdes-2018-06-024
+  doi: 10.1016/j.nucengdes.2018.06.024
+  pesquisadores:
+  - carlos-velasquez
+- titulo: Cross section evaluation for a LWR pin lattices with thorium applications
+  autores:
+  - Carlos Eduardo Velasquez
+  - Cláubia Pereira
+  - Maria Auxiliadora F. Veloso
+  - Antonella Lombardi Costa
+  ano: 2017
+  tipo: artigo
+  veiculo: Annals of Nuclear Energy
+  acesso_aberto: false
+  citacoes: 1
+  id: doi-10-1016-j-anucene-2017-04-022
+  doi: 10.1016/j.anucene.2017.04.022
+  pesquisadores:
+  - carlos-velasquez
+- titulo: Sensitivity analysis of a PWR fuel element using zircaloy and silicon carbide claddings
+  autores:
+  - Rochkhudson B. de Faria
+  - Patrícia A.L. Reis
+  - Carlos Eduardo Velasquez
+  - Javier González Mantecón
+  - Adolfo R. Hamers
+  - Antonella Lombardi Costa
+  - Cláubia Pereira
+  ano: 2017
+  tipo: artigo
+  veiculo: Nuclear Engineering and Design
+  acesso_aberto: false
+  citacoes: 6
+  id: doi-10-1016-j-nucengdes-2017-05-006
+  doi: 10.1016/j.nucengdes.2017.05.006
+  pesquisadores:
+  - carlos-velasquez
+- titulo: Steady-state thermal simulations of the liquid-salt-cooled high-temperature reactor
+  autores:
+  - Mario Cerrogrande Ramos
+  - Maria Elizabeth Scari
+  - Antonella Lombardi Costa
+  - Cláubia Pereira
+  - Carlos Eduardo Velasquez
+  - Maria Auxiliadora F. Veloso
+  ano: 2017
+  tipo: artigo
+  veiculo: International Journal of Energy Research
+  acesso_aberto: true
+  url_oa: https://onlinelibrary.wiley.com/doi/pdfdirect/10.1002/er.3896
+  citacoes: 2
+  resumo: A thermal model for the LS-VHTR (liquid-salt-cooled very high temperature reactor) concept has been developed by using the RELAP5 code. The LS-VHTR concept is proposed to operate at 2400 MWth, and it is cooled by liquid Li2BeF4 (Flibe) salt. An initial thermal analysis of the LS-VHTR concept was performed in a previous work where the simulation of only 1 unit cell was considered. In the present work, the RELAP5 model was increased to represent the complete core with all hexagonal blocks. Also, the salt recirculation has been simulated. The LS-VHTR core inlet and outlet coolant temperatures, heat structures temperature, and pressure drop have been simulated. The results were compared with the available data and demonstrate that the developed model is capable of reproducing the thermal behavior of the reactor in steady-state operation.
+  id: doi-10-1002-er-3896
+  doi: 10.1002/er.3896
+  pesquisadores:
+  - carlos-velasquez
+- titulo: Temperature sensitivity analysis for an ADS system using different nuclear data libraries
+  autores:
+  - Carlos Eduardo Velasquez
+  - Graiciany de Paula Barros
+  - Cláubia Pereira
+  - Maria Auxiliadora F. Veloso
+  - Antonella Lombardi Costa
+  ano: 2017
+  tipo: artigo
+  veiculo: International Journal of Energy Research
+  acesso_aberto: true
+  url_oa: https://onlinelibrary.wiley.com/doi/pdfdirect/10.1002/er.3895
+  citacoes: 2
+  resumo: The aim is to update the evaluated nuclear data library (ENDL) for nuclides used to simulate accelerator driven systems with JEFF3.1, JEFF3.2, and ENDF/B-VII.1. The applied methodology was, first of all, reproduced to 3 ENDL comparing the cross sections with the ADS Nuclear Data Library at 293.6 K. Second, libraries were processed at working temperature at 1200 K in containing fissile/fissionable material and 900 K for the remaining regions. Third, it is performed a criticality calculation at steady state using all temperatures processed at room temperature and working temperature and compared. Results, indicates the suitable ENDL to perform future burnup calculations.
+  id: doi-10-1002-er-3895
+  doi: 10.1002/er.3895
+  pesquisadores:
+  - carlos-velasquez
+- titulo: Effects on Criticality and Burnup Calculations Changings ADS Cladding Material
+  autores:
+  - Carlos Eduardo Velasquez
+  - Graiciany de Paula Barros
+  - Maria Auxiliadora F. Veloso
+  - Antonella Lombardi Costa
+  - Cláubia Pereira
+  ano: 2016
+  tipo: artigo
+  veiculo: MRS Proceedings
+  acesso_aberto: false
+  citacoes: 0
+  id: doi-10-1557-opl-2016-30
+  doi: 10.1557/opl.2016.30
+  pesquisadores:
+  - carlos-velasquez
+- titulo: Fusion–Fission Hybrid Systems for Transmutation
+  autores:
+  - Carlos Eduardo Velasquez
+  - Cláubia Pereira
+  - Maria Auxiliadora F. Veloso
+  - Antonella Lombardi Costa
+  - Graiciany de Paula Barros
+  ano: 2016
+  tipo: artigo
+  veiculo: Journal of Fusion Energy
+  acesso_aberto: true
+  url_oa: http://hdl.handle.net/1843/44983
+  citacoes: 23
+  id: doi-10-1007-s10894-016-0080-3
+  doi: 10.1007/s10894-016-0080-3
+  pesquisadores:
+  - carlos-velasquez
+- titulo: GANEX and UREX+ reprocessed fuels in ADS
+  autores:
+  - Graiciany de Paula Barros
+  - Carlos Eduardo Velasquez
+  - Cláubia Pereira
+  - Maria Auxiliadora F. Veloso
+  - Antonella Lombardi Costa
+  ano: 2016
+  tipo: artigo
+  veiculo: International Journal of Hydrogen Energy
+  acesso_aberto: false
+  citacoes: 7
+  id: doi-10-1016-j-ijhydene-2016-02-139
+  doi: 10.1016/j.ijhydene.2016.02.139
+  pesquisadores:
+  - carlos-velasquez
+- titulo: HTR steady state and transient thermal analyses
+  autores:
+  - Maria Elizabeth Scari
+  - Antonella Lombardi Costa
+  - Cláubia Pereira
+  - Carlos Eduardo Velasquez
+  - Maria Auxiliadora F. Veloso
+  ano: 2016
+  tipo: artigo
+  veiculo: International Journal of Hydrogen Energy
+  acesso_aberto: true
+  url_oa: https://www.sciencedirect.com/science/article/am/pii/S0360319915313586
+  citacoes: 17
+  id: doi-10-1016-j-ijhydene-2016-01-157
+  doi: 10.1016/j.ijhydene.2016.01.157
+  pesquisadores:
+  - carlos-velasquez
+- titulo: Neutronic analysis of reprocessed fuel in a gas-cooled fast reactor
+  ano: 2016
+  tipo: congresso
+  veiculo: International Congress on Advances in Nuclear Power Plants Icapp 2016
+  id: orcid-d17d122946
+  pesquisadores:
+  - carlos-velasquez
+- titulo: NEUTRONIC PERFORMANCE OF (U, Pu)C FUEL IN A LATTICE OF GFR USING SCALE 6.0
+  autores:
+  - A. A. P. Macedo
+  - Carlos Eduardo Velasquez
+  - Clarysson A. M. da Silva
+  - Cláubia Pereira
+  ano: 2016
+  tipo: artigo
+  veiculo: MRS Proceedings
+  acesso_aberto: false
+  citacoes: 1
+  id: doi-10-1557-opl-2016-32
+  doi: 10.1557/opl.2016.32
+  pesquisadores:
+  - carlos-velasquez
+- titulo: Criticality and depletion analysis for reactivity variations in hybrids systems
+  ano: 2015
+  tipo: congresso
+  veiculo: 12th International Topical Meeting on Nuclear Applications of Accelerators 2015 Accapp 2015
+  id: orcid-dc7947f895
+  pesquisadores:
+  - carlos-velasquez
+- titulo: Damage Calculation for First Wall Submitted to High Neutron Flux in a Tokamak
+  autores:
+  - Carlos Eduardo Velasquez
+  - Maria Auxiliadora F. Veloso
+  - Antonella Lombardi Costa
+  - Cláubia Pereira
+  ano: 2015
+  tipo: artigo
+  veiculo: MRS Proceedings
+  acesso_aberto: false
+  citacoes: 0
+  id: doi-10-1557-opl-2015-124
+  doi: 10.1557/opl.2015.124
+  pesquisadores:
+  - carlos-velasquez
+- titulo: Depletion evaluation of an ADS using reprocessed fuel
+  autores:
+  - Graiciany de Paula Barros
+  - Carlos Eduardo Velasquez
+  - Cláubia Pereira
+  - Maria Auxiliadora F. Veloso
+  - Antonella Lombardi Costa
+  ano: 2015
+  tipo: artigo
+  veiculo: International Journal of Hydrogen Energy
+  acesso_aberto: false
+  citacoes: 7
+  id: doi-10-1016-j-ijhydene-2015-06-088
+  doi: 10.1016/j.ijhydene.2015.06.088
+  pesquisadores:
+  - carlos-velasquez
+- titulo: Evaluation of subcritical hybrid systems loaded with reprocessed fuel
+  autores:
+  - Carlos Eduardo Velasquez
+  - Graiciany de Paula Barros
+  - Cláubia Pereira
+  - Maria Auxiliadora F. Veloso
+  - Antonella Lombardi Costa
+  ano: 2015
+  tipo: artigo
+  veiculo: Annals of Nuclear Energy
+  acesso_aberto: false
+  citacoes: 4
+  id: doi-10-1016-j-anucene-2015-06-018
+  doi: 10.1016/j.anucene.2015.06.018
+  pesquisadores:
+  - carlos-velasquez
+- titulo: First Wall Materials Effects on Nuclear Criticality Evaluation of Fusion-Fission Systems
+  autores:
+  - Carlos Eduardo Velasquez
+  - Graiciany de Paula Barros
+  - Cláubia Pereira
+  - Maria Auxiliadora F. Veloso
+  - Antonella Lombardi Costa
+  ano: 2015
+  tipo: artigo
+  veiculo: Fusion Science & Technology
+  acesso_aberto: false
+  citacoes: 1
+  resumo: Different first wall material proposals based on tungsten alloy WNiFe, WLa2O3, W1.1TiC, W26Re, beryllium alloy S-B65, stainless steel SS316 and graphite have been studied in the last years. These materials must be capable of withstanding high temperature and neutron flux. Nevertheless, using hybrid systems, the first wall material choice could influence the criticality system due to the different properties of each material. To analyze this influence, two hybrid reactors were evaluated. The first one is a Tokamak based on magnetic confinement and the second one based on inertial confinement. Both systems contain a transmutation layer with reprocessed fuel spiked with thorium. The results showed the principal nuclides affected in the transmutation layer and the differences in the criticality due to neutron flux variations produced by the changes in the first wall material.
+  id: doi-10-13182-fst14-949
+  doi: 10.13182/fst14-949
+  pesquisadores:
+  - carlos-velasquez
+- titulo: Layer thickness evaluation for transuranic transmutation in a fusion–fission system
+  autores:
+  - Carlos Eduardo Velasquez
+  - Cláubia Pereira
+  - Maria Auxiliadora F. Veloso
+  - Antonella Lombardi Costa
+  ano: 2015
+  tipo: artigo
+  veiculo: Nuclear Engineering and Design
+  acesso_aberto: false
+  citacoes: 4
+  id: doi-10-1016-j-nucengdes-2015-01-022
+  doi: 10.1016/j.nucengdes.2015.01.022
+  pesquisadores:
+  - carlos-velasquez
+- titulo: Modelling effects on axial neutron flux in a Tokamak device
+  autores:
+  - Carlos Eduardo Velasquez
+  - Cláubia Pereira
+  - Maria Auxiliadora F. Veloso
+  - Antonella Lombardi Costa
+  ano: 2014
+  tipo: artigo
+  veiculo: Progress in Nuclear Energy
+  acesso_aberto: false
+  citacoes: 11
+  id: doi-10-1016-j-pnucene-2014-03-005
+  doi: 10.1016/j.pnucene.2014.03.005
+  pesquisadores:
+  - carlos-velasquez
+- titulo: Spent fuel criticality and compositions evaluation for long-term disposal in a generic cask
+  autores:
+  - Carlos Eduardo Velasquez
+  - R.V. Sousa
+  - Ângela Fortini
+  - Cláubia Pereira
+  - Antonella Lombardi Costa
+  - Clarysson A. M. da Silva
+  - Maria Auxiliadora F. Veloso
+  - Arno Heeren de Oliveira
+  - F.R. de Carvalho
+  ano: 2014
+  tipo: artigo
+  veiculo: Nuclear Engineering and Design
+  acesso_aberto: false
+  citacoes: 8
+  id: doi-10-1016-j-nucengdes-2014-04-021
+  doi: 10.1016/j.nucengdes.2014.04.021
+  pesquisadores:
+  - carlos-velasquez
+- titulo: 'Axial Neutron Flux Evaluation in a Tokamak System: a Possible Transmutation Blanket Position for a Fusion–Fission Transmutation System'
+  autores:
+  - Carlos Eduardo Velasquez
+  - Graiciany de Paula Barros
+  - Cláubia Pereira
+  - Maria Auxiliadora F. Veloso
+  - Antonella Lombardi Costa
+  ano: 2012
+  tipo: artigo
+  veiculo: Brazilian Journal of Physics
+  acesso_aberto: false
+  citacoes: 16
+  id: doi-10-1007-s13538-012-0081-2
+  doi: 10.1007/s13538-012-0081-2
+  pesquisadores:
+  - carlos-velasquez

@@ -50,3 +50,5 @@ profile_pubs: Publicações
 profile_areas: Áreas de pesquisa
 profile_links: Perfis
 no_pubs: Nenhuma publicação associada ainda.
+
+cited_source: 'Fonte: OpenAlex (pode diferir do Google Scholar)'

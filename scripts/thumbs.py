@@ -11,7 +11,7 @@ import requests
 import yaml
 
 try:
-    import fitz  # PyMuPDF
+    import pymupdf as fitz
 except ImportError:
     sys.exit("Instale as dependencias: pip install -r requirements.txt")
 
