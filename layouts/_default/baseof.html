@@ -17,5 +17,7 @@
   {{ partial "header.html" . }}
   <main id="conteudo">{{ block "main" . }}{{ end }}</main>
   {{ partial "footer.html" . }}
+  {{ $js := resources.Get "js/main.js" | minify | fingerprint }}
+  <script src="{{ $js.RelPermalink }}" defer></script>
 </body>
 </html>

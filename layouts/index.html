@@ -1,13 +1,39 @@
 {{ define "main" }}
 <section class="hero">
-  <div class="container">
-    <p class="eyebrow">{{ i18n "hero_eyebrow" }}</p>
-    <h1>{{ i18n "hero_title" }}</h1>
-    <p class="lead">{{ i18n "hero_text" }}</p>
-    <div class="hero-actions">
-      <a class="btn btn-primary" href="{{ "/pesquisa/" | relLangURL }}">{{ i18n "hero_cta_research" }}</a>
-      <a class="btn btn-ghost" href="{{ "/contato/" | relLangURL }}">{{ i18n "hero_cta_contact" }}</a>
+  <div class="container hero-grid">
+    <div class="hero-text">
+      <p class="eyebrow">{{ i18n "hero_eyebrow" }}</p>
+      <h1>{{ i18n "hero_title" }}</h1>
+      <p class="lead">{{ i18n "hero_text" }}</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="{{ "/pesquisa/" | relLangURL }}">{{ i18n "hero_cta_research" }}</a>
+        <a class="btn btn-ghost" href="{{ "/contato/" | relLangURL }}">{{ i18n "hero_cta_contact" }}</a>
+      </div>
     </div>
+
+    {{ with site.Data.site.destaques }}
+    <aside class="panel" data-carousel data-interval="6000" aria-roledescription="carousel" aria-label="{{ i18n "highlights" }}">
+      <p class="panel-title">{{ i18n "highlights" }}</p>
+      <div class="slides" aria-live="polite">
+        {{ range $i, $d := . }}
+        <article class="slide{{ if eq $i 0 }} active{{ end }}">
+          <span class="tag tag-{{ $d.tipo }}">{{ i18n (printf "tag_%s" $d.tipo) }}</span>
+          <h3>{{ index $d.titulo $.Lang }}</h3>
+          <p>{{ index $d.texto $.Lang }}</p>
+          <div class="slide-foot">
+            <time>{{ $d.data }}</time>
+            {{ if $d.link }}<a href="{{ $d.link | relLangURL }}">{{ i18n "read_more" }} →</a>{{ end }}
+          </div>
+        </article>
+        {{ end }}
+      </div>
+      <div class="panel-ctrl">
+        <button class="prev" aria-label="{{ i18n "prev" }}">‹</button>
+        <div class="dots">{{ range $i, $d := . }}<button class="dot{{ if eq $i 0 }} active{{ end }}" aria-label="{{ add $i 1 }}"></button>{{ end }}</div>
+        <button class="next" aria-label="{{ i18n "next" }}">›</button>
+      </div>
+    </aside>
+    {{ end }}
   </div>
 </section>
 

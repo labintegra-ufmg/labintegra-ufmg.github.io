@@ -1,0 +1,21 @@
+- tipo: noticia
+  data: "2026-01-15"
+  titulo: { pt-br: "Novo site do LabIntegra no ar", en: "New LabIntegra website is live" }
+  texto:
+    pt-br: "Conheça as linhas de pesquisa, a equipe e as publicações do laboratório."
+    en: "Explore the laboratory's research lines, team and publications."
+  link: "/pesquisa/"
+- tipo: publicacao
+  data: "2026-01-10"
+  titulo: { pt-br: "Exemplo: artigo sobre transição energética", en: "Example: article on energy transition" }
+  texto:
+    pt-br: "Este espaço exibirá automaticamente as publicações mais recentes do laboratório."
+    en: "This space will automatically display the laboratory's latest publications."
+  link: "/publicacoes/"
+- tipo: projeto
+  data: "2026-01-05"
+  titulo: { pt-br: "Exemplo: projeto de planejamento energético", en: "Example: energy planning project" }
+  texto:
+    pt-br: "Projetos em andamento e seus resultados serão apresentados aqui."
+    en: "Ongoing projects and their results will be presented here."
+  link: "/projetos/"
