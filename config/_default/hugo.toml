@@ -1,0 +1,19 @@
+baseURL = "https://labintegra-ufmg.github.io/"
+defaultContentLanguage = "pt-br"
+defaultContentLanguageInSubdir = false
+
+[languages]
+  [languages.pt-br]
+    languageName = "Português"
+    languageCode = "pt-BR"
+    weight = 1
+    title = "LabIntegra | UFMG"
+    [languages.pt-br.params]
+      description = "Laboratório LabIntegra - Escola de Engenharia, UFMG"
+  [languages.en]
+    languageName = "English"
+    languageCode = "en-US"
+    weight = 2
+    title = "LabIntegra | UFMG"
+    [languages.en.params]
+      description = "LabIntegra Laboratory - School of Engineering, UFMG"

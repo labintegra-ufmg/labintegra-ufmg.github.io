@@ -1,0 +1,12 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ if .IsHome }}{{ site.Title }}{{ else }}{{ .Title }} | {{ site.Title }}{{ end }}</title>
+</head>
+<body>
+  <nav>{{ range site.Menus.main }}<a href="{{ .URL }}">{{ .Name }}</a> | {{ end }}</nav>
+  {{ block "main" . }}{{ end }}
+</body>
+</html>

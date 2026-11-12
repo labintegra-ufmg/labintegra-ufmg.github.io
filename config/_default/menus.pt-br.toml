@@ -1,0 +1,39 @@
+[[main]]
+  name = "Início"
+  pageRef = "/"
+  weight = 10
+
+[[main]]
+  name = "Sobre"
+  pageRef = "/sobre"
+  weight = 20
+
+[[main]]
+  name = "Pesquisa"
+  pageRef = "/pesquisa"
+  weight = 30
+
+[[main]]
+  name = "Equipe"
+  pageRef = "/equipe"
+  weight = 40
+
+[[main]]
+  name = "Publicações"
+  pageRef = "/publicacoes"
+  weight = 50
+
+[[main]]
+  name = "Formação"
+  pageRef = "/formacao"
+  weight = 60
+
+[[main]]
+  name = "Projetos"
+  pageRef = "/projetos"
+  weight = 70
+
+[[main]]
+  name = "Contato"
+  pageRef = "/contato"
+  weight = 80
