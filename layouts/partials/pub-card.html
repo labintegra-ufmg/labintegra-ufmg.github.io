@@ -1,7 +1,7 @@
 {{ $href := .url | default "" }}
 {{ if and (not $href) .doi }}{{ $href = printf "https://doi.org/%s" .doi }}{{ end }}
 <article class="pub" data-ano="{{ .ano }}" data-tipo="{{ .tipo }}" data-q="{{ printf "%s %s %s" .titulo (delimit (.autores | default slice) " ") (.veiculo | default "") | lower }}">
-  {{ with .imagem }}<img class="pub-thumb" src="{{ . | relURL }}" alt="" loading="lazy">{{ end }}
+  {{ $img := .imagem | default "" }}{{ if not $img }}{{ $try := printf "images/pubs/%s.jpg" (.id | default "x") }}{{ if os.FileExists (printf "static/%s" $try) }}{{ $img = $try }}{{ end }}{{ end }}{{ with $img }}<a class="pub-thumb-link" {{ if $href }}href="{{ $href }}" target="_blank" rel="noopener"{{ end }}><img class="pub-thumb" src="{{ . | relURL }}" alt="" loading="lazy"></a>{{ end }}
   <div class="pub-body">
     <div class="badges">
       <span class="badge">{{ i18n (printf "tipo_%s" (.tipo | default "outro")) }}</span>
