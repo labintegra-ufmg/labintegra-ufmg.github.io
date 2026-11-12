@@ -54,6 +54,7 @@ def main():
     a.add_argument("--scholar", default="")
     a.add_argument("--linkedin", default="")
     a.add_argument("--researchgate", default="")
+    a.add_argument("--scopus", default="")
     a.add_argument("--email", default="")
     a.add_argument("--areas", default="", help="separadas por ;")
     a.add_argument("--foto", default="", help="caminho de uma imagem local")
@@ -91,7 +92,7 @@ def main():
     def fm(cargo):
         d = {"title": nome, "id": pid, "categoria": o.categoria, "cargo": cargo, "ativo": True,
              "orcid": o.orcid, "lattes": lattes, "scholar": scholar, "linkedin": linkedin,
-             "researchgate": o.researchgate, "email": o.email, "foto": foto, "areas": areas}
+             "researchgate": o.researchgate, "scopus": o.scopus, "email": o.email, "foto": foto, "areas": areas}
         return {k: v for k, v in d.items() if v not in ("", None, [])}
 
     pasta = ROOT / "content" / "equipe" / pid

@@ -11,7 +11,7 @@ import yaml
 ROOT = Path(__file__).resolve().parent.parent
 pubs = yaml.safe_load((ROOT / "data/publicacoes/auto.yaml").read_text(encoding="utf-8")) or []
 membros = yaml.safe_load((ROOT / "scripts/orcids.yaml").read_text(encoding="utf-8")) or []
-meus = {m["orcid"] for m in membros}
+meus = {m.get("orcid") for m in membros if m.get("orcid")}
 dois = [p["doi"] for p in pubs if p.get("doi")]
 mailto = os.getenv("OPENALEX_MAILTO", "")
 key = os.getenv("OPENALEX_API_KEY", "")

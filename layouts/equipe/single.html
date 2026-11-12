@@ -11,6 +11,7 @@
         {{ with .Params.lattes }}<li><a href="{{ . }}" target="_blank" rel="noopener">Lattes</a></li>{{ end }}
         {{ with .Params.scholar }}<li><a href="{{ . }}" target="_blank" rel="noopener">Google Scholar</a></li>{{ end }}
         {{ with .Params.linkedin }}<li><a href="{{ . }}" target="_blank" rel="noopener">LinkedIn</a></li>{{ end }}
+        {{ with .Params.scopus }}<li><a href="https://www.scopus.com/authid/detail.uri?authorId={{ . }}" target="_blank" rel="noopener">Scopus</a></li>{{ end }}
         {{ with .Params.researchgate }}<li><a href="{{ . }}" target="_blank" rel="noopener">ResearchGate</a></li>{{ end }}
         {{ with .Params.email }}<li><a href="mailto:{{ . }}">E-mail</a></li>{{ end }}
       </ul>
@@ -18,6 +19,11 @@
     <div class="profile-main">
       <div class="prose">{{ .Content }}</div>
       {{ with .Params.areas }}<h2 class="sub">{{ i18n "profile_areas" }}</h2><ul class="chips">{{ range . }}<li>{{ . }}</li>{{ end }}</ul>{{ end }}
+      {{ with index (hugo.Data.equipe.stats | default dict) $id }}
+        {{ with .vinculos }}<h2 class="sub">{{ i18n "profile_aff" }}</h2><ul class="plain">{{ range . }}<li>{{ . }}</li>{{ end }}</ul>{{ end }}
+        {{ with .formacao }}<h2 class="sub">{{ i18n "profile_edu" }}</h2><ul class="plain">{{ range . }}<li>{{ . }}</li>{{ end }}</ul>{{ end }}
+        {{ if .obras }}<p class="stats">h-index <strong>{{ .h_index }}</strong> · {{ .obras }} {{ i18n "stats_works" }} · {{ .citacoes }} {{ i18n "cited_by" | lower }} <span class="muted">(OpenAlex)</span></p>{{ end }}
+      {{ end }}
       <h2 class="sub">{{ i18n "profile_pubs" }}</h2>
       {{ $mine := slice }}
       {{ range partial "pubs.html" . }}{{ if in (.pesquisadores | default slice) $id }}{{ $mine = $mine | append . }}{{ end }}{{ end }}

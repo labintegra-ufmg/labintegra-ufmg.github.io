@@ -52,3 +52,7 @@ profile_links: Profiles
 no_pubs: No associated publications yet.
 
 cited_source: 'Source: OpenAlex (may differ from Google Scholar)'
+
+profile_aff: Affiliations
+profile_edu: Education
+stats_works: works

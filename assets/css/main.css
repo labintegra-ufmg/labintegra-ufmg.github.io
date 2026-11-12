@@ -150,3 +150,7 @@ a{color:var(--c-primary)}
 .pub-thumb-link{flex:none;align-self:flex-start;line-height:0}
 .pub-thumb-link .pub-thumb{width:120px;transition:.2s}
 .pub-thumb-link:hover .pub-thumb{box-shadow:0 6px 16px rgba(11,58,91,.25);transform:scale(1.03)}
+
+.plain{margin:0;padding-left:1.2rem;color:var(--c-muted)}
+.plain li{margin:.25rem 0}
+.stats{margin-top:1.8rem;padding:.8rem 1rem;background:var(--c-alt);border-radius:10px;color:var(--c-muted);font-size:.92rem}

@@ -145,14 +145,55 @@ def build(work, oa, member):
     return {k: v for k, v in rec.items() if v not in ("", None, [])}
 
 
+def author_id(m):
+    if m.get("openalex"):
+        return m["openalex"]
+    if m.get("scopus"):
+        p = {"filter": "scopus:" + str(m["scopus"]), "select": "id"}
+        if MAILTO:
+            p["mailto"] = MAILTO
+        if API_KEY:
+            p["api_key"] = API_KEY
+        r = get("https://api.openalex.org/authors", params=p).get("results", [])
+        if r:
+            return r[0]["id"].split("/")[-1]
+    return ""
+
+
+def openalex_by_author(aid):
+    out, cursor = [], "*"
+    while cursor and len(out) < 1000:
+        p = {"filter": "author.id:" + aid, "per-page": 100, "cursor": cursor,
+             "select": "doi,title,authorships,publication_year,type,primary_location,open_access,cited_by_count,abstract_inverted_index"}
+        if MAILTO:
+            p["mailto"] = MAILTO
+        if API_KEY:
+            p["api_key"] = API_KEY
+        d = get("https://api.openalex.org/works", params=p)
+        if not d.get("results"):
+            break
+        out += d["results"]
+        cursor = (d.get("meta") or {}).get("next_cursor")
+    return out
+
+
 def main():
     members = yaml.safe_load(SRC.read_text(encoding="utf-8")) or []
     merged = {}
     for m in members:
-        print(f"> {m['nome']} ({m['orcid']})")
-        works = orcid_works(m["orcid"])
+        print(f"> {m['nome']} ({m.get('orcid') or m.get('scopus') or m.get('openalex')})")
+        works = orcid_works(m["orcid"]) if m.get("orcid") else []
         oa = openalex_by_doi([w["doi"] for w in works if w["doi"]])
-        print(f"  {len(works)} obras no ORCID, {len(oa)} encontradas na OpenAlex")
+        if not m.get("orcid"):
+            aid = author_id(m)
+            if aid:
+                have = {w["doi"] for w in works}
+                for w2 in openalex_by_author(aid):
+                    d = norm_doi(w2.get("doi"))
+                    if d and d not in have:
+                        works.append({"doi": d, "titulo": w2.get("title") or "", "ano": str(w2.get("publication_year") or ""), "veiculo": "", "tipo_orcid": ""})
+                        oa[d] = w2
+        print(f"  {len(works)} obras no ORCID/OpenAlex, {len(oa)} encontradas na OpenAlex")
         for w in works:
             rec = build(w, oa.get(w["doi"]), m["id"])
             if not rec:
