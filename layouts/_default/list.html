@@ -1,1 +1,15 @@
-{{ define "main" }}<h1>{{ .Title }}</h1>{{ .Content }}{{ end }}
+{{ define "main" }}
+<section class="page-hero"><div class="container"><h1>{{ .Title }}</h1></div></section>
+<section class="section">
+  <div class="container prose">
+    {{ .Content }}
+    {{ if .Pages }}
+    <div class="cards">
+      {{ range .Pages }}
+      <article class="card"><h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3><p>{{ .Summary | plainify | truncate 140 }}</p></article>
+      {{ end }}
+    </div>
+    {{ end }}
+  </div>
+</section>
+{{ end }}

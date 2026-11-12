@@ -1,0 +1,17 @@
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div>
+      <strong>LabIntegra</strong>
+      <p>{{ i18n "footer_inst" }}</p>
+    </div>
+    <div>
+      <strong>{{ i18n "footer_nav" }}</strong>
+      <ul>{{ range site.Menus.main }}<li><a href="{{ .URL }}">{{ .Name }}</a></li>{{ end }}</ul>
+    </div>
+    <div>
+      <strong>{{ i18n "footer_contact" }}</strong>
+      <p>{{ i18n "footer_address" }}</p>
+    </div>
+  </div>
+  <div class="container footer-bottom">© {{ now.Year }} LabIntegra · UFMG</div>
+</footer>

@@ -1,0 +1,20 @@
+- icone: "⚡"
+  titulo: { pt-br: "Planejamento Energético", en: "Energy Planning" }
+  descricao:
+    pt-br: "Modelagem e análise de sistemas energéticos para apoiar decisões de longo prazo."
+    en: "Modeling and analysis of energy systems to support long-term decisions."
+- icone: "☀️"
+  titulo: { pt-br: "Energias Renováveis", en: "Renewable Energy" }
+  descricao:
+    pt-br: "Integração de fontes solar, eólica, hídrica e biomassa ao sistema energético."
+    en: "Integration of solar, wind, hydro and biomass sources into the energy system."
+- icone: "🌱"
+  titulo: { pt-br: "Transição Energética de Baixo Carbono", en: "Low-Carbon Energy Transition" }
+  descricao:
+    pt-br: "Caminhos tecnológicos e políticas para a descarbonização da matriz energética."
+    en: "Technological pathways and policies for decarbonizing the energy mix."
+- icone: "🔌"
+  titulo: { pt-br: "Integração de Sistemas", en: "Systems Integration" }
+  descricao:
+    pt-br: "Integração entre setores, redes e tecnologias para um sistema mais eficiente e resiliente."
+    en: "Integration across sectors, grids and technologies for a more efficient and resilient system."

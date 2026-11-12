@@ -1,12 +1,21 @@
 <!doctype html>
-<html lang="pt-BR">
+<html lang="{{ .Lang }}">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>{{ if .IsHome }}{{ site.Title }}{{ else }}{{ .Title }} | {{ site.Title }}{{ end }}</title>
+  <meta name="description" content="{{ .Description | default site.Params.description }}">
+  <link rel="canonical" href="{{ .Permalink }}">
+  {{ range .AllTranslations }}<link rel="alternate" hreflang="{{ .Lang }}" href="{{ .Permalink }}">
+  {{ end }}
+  <link rel="icon" href="{{ "logo/logo.jpg" | relURL }}">
+  {{ $css := resources.Get "css/main.css" | minify | fingerprint }}
+  <link rel="stylesheet" href="{{ $css.RelPermalink }}">
 </head>
 <body>
-  <nav>{{ range site.Menus.main }}<a href="{{ .URL }}">{{ .Name }}</a> | {{ end }}</nav>
-  {{ block "main" . }}{{ end }}
+  <a class="skip" href="#conteudo">{{ i18n "skip" }}</a>
+  {{ partial "header.html" . }}
+  <main id="conteudo">{{ block "main" . }}{{ end }}</main>
+  {{ partial "footer.html" . }}
 </body>
 </html>

@@ -1,0 +1,25 @@
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="brand" href="{{ "/" | relLangURL }}">
+      <img src="{{ "logo/logo.jpg" | relURL }}" alt="LabIntegra">
+      <span class="brand-text"><strong>LabIntegra</strong><small>UFMG · Escola de Engenharia</small></span>
+    </a>
+
+    <button class="nav-toggle" aria-label="Menu" onclick="document.body.classList.toggle('nav-open')">☰</button>
+
+    <nav class="nav" aria-label="Principal">
+      {{ range site.Menus.main }}
+        <a href="{{ .URL }}" class="{{ if $.IsMenuCurrent "main" . }}active{{ end }}{{ if $.HasMenuCurrent "main" . }}active{{ end }}">{{ .Name }}</a>
+      {{ end }}
+    </nav>
+
+    <div class="langs">
+      {{ range .AllTranslations }}
+        {{ $flag := cond (eq .Lang "en") "us" "br" }}
+        <a href="{{ .RelPermalink }}" hreflang="{{ .Lang }}" title="{{ cond (eq .Lang "en") "English" "Português" }}" class="lang {{ if eq .Lang $.Lang }}current{{ end }}">
+          <img src="https://flagcdn.com/w40/{{ $flag }}.png" alt="{{ .Lang }}" width="26" height="18">
+        </a>
+      {{ end }}
+    </div>
+  </div>
+</header>

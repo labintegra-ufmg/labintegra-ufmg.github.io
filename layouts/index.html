@@ -1,1 +1,44 @@
-{{ define "main" }}<h1>{{ site.Title }}</h1><p>{{ i18n "read_more" }} - em construção / under construction.</p>{{ end }}
+{{ define "main" }}
+<section class="hero">
+  <div class="container">
+    <p class="eyebrow">{{ i18n "hero_eyebrow" }}</p>
+    <h1>{{ i18n "hero_title" }}</h1>
+    <p class="lead">{{ i18n "hero_text" }}</p>
+    <div class="hero-actions">
+      <a class="btn btn-primary" href="{{ "/pesquisa/" | relLangURL }}">{{ i18n "hero_cta_research" }}</a>
+      <a class="btn btn-ghost" href="{{ "/contato/" | relLangURL }}">{{ i18n "hero_cta_contact" }}</a>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <h2 class="section-title">{{ i18n "lines_title" }}</h2>
+    <p class="section-sub">{{ i18n "lines_sub" }}</p>
+    <div class="cards">
+      {{ range site.Data.site.linhas }}
+      <article class="card">
+        <div class="card-icon">{{ .icone }}</div>
+        <h3>{{ index .titulo $.Lang }}</h3>
+        <p>{{ index .descricao $.Lang }}</p>
+      </article>
+      {{ end }}
+    </div>
+  </div>
+</section>
+
+<section class="section section-alt">
+  <div class="container">
+    <h2 class="section-title">{{ i18n "latest_title" }}</h2>
+    <p class="muted">{{ i18n "latest_empty" }}</p>
+  </div>
+</section>
+
+<section class="cta">
+  <div class="container">
+    <h2>{{ i18n "cta_title" }}</h2>
+    <p>{{ i18n "cta_text" }}</p>
+    <a class="btn btn-accent" href="{{ "/contato/" | relLangURL }}">{{ i18n "hero_cta_contact" }}</a>
+  </div>
+</section>
+{{ end }}
