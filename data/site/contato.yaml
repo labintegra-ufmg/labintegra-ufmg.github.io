@@ -16,3 +16,4 @@ mapa_link: "https://www.google.com/maps/search/?api=1&query=Escola+de+Engenharia
 links:
   - { nome: "UFMG", url: "https://ufmg.br" }
   - { nome: "Escola de Engenharia", url: "https://eng.ufmg.br" }
+  - { nome: "PCTN", url: "https://www.nuclear.ufmg.br/" }

@@ -6,3 +6,5 @@ __pycache__/
 .env
 
 *.bak
+fotos/*
+!fotos/LEIA-ME.txt

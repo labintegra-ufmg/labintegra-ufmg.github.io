@@ -1,0 +1,5 @@
+Solte aqui as fotos originais, com o nome da pessoa:
+  Carlos Velasquez.jpg | Jose Pericles Freire.png | ruan-luzia.jpg
+Depois rode:  python scripts/fotos.py
+Dicas: foto de busto/rosto, fundo simples, boa luz. Formatos: jpg, png, webp.
+Esta pasta NAO e publicada (so a versao reduzida em static/images/equipe/).

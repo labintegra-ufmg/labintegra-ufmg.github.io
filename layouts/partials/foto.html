@@ -1,1 +1,11 @@
-{{ $p := .p }}{{ with $p.Params.foto }}<img class="avatar {{ $.cls }}" src="{{ . | relURL }}" alt="{{ $p.Title }}" loading="lazy">{{ else }}<div class="avatar avatar-ph {{ $.cls }}" aria-hidden="true">{{ substr $p.Title 0 1 }}</div>{{ end }}
+{{/* Uso: partial "foto.html" (dict "p" . "size" "md")  -- sizes: xs sm md lg xl
+     Na propria pagina da pessoa (perfil), o tamanho vira "xl" automaticamente. */}}
+{{ $p := . }}{{ $size := "md" }}
+{{ if reflect.IsMap . }}{{ $p = .p }}{{ $size = .size | default "md" }}{{ end }}
+{{ with page }}{{ if eq .RelPermalink $p.RelPermalink }}{{ $size = "xl" }}{{ end }}{{ end }}
+{{ $id := "" }}{{ with $p.File }}{{ $id = .ContentBaseName }}{{ end }}
+{{ $src := "" }}
+{{ range slice "jpg" "jpeg" "png" "webp" }}{{ if and (not $src) (os.FileExists (printf "static/images/equipe/%s.%s" $id .)) }}{{ $src = printf "/images/equipe/%s.%s" $id . | relURL }}{{ end }}{{ end }}
+{{ $parts := split (strings.TrimSpace $p.Title) " " }}
+{{ $ini := upper (printf "%s%s" (substr (index $parts 0) 0 1) (substr (index $parts (sub (len $parts) 1)) 0 1)) }}
+<span class="avatar avatar-{{ $size }}">{{ if $src }}<img src="{{ $src }}" alt="{{ $p.Title }}" loading="lazy" decoding="async">{{ else }}<span class="avatar-ph" aria-hidden="true">{{ $ini }}</span>{{ end }}</span>
