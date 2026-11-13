@@ -13,6 +13,7 @@ areas:
 - Nuclear and radioactivity studies
 - Fusion materials and technologies
 - Nuclear physics research studies
+scholar: "https://scholar.google.com/citations?user=QNgXE-oAAAAJ"
 ---
 
 

@@ -12,4 +12,6 @@ areas:
 - Solar Radiation and Photovoltaics
 - Sustainability and Climate Change Governance
 - Energy, Environment, Economic Growth
+researchgate: "https://www.researchgate.net/profile/Jose-Freire-22"
+scholar: "https://scholar.google.com/citations?user=pU1qPI0AAAAJ"
 ---

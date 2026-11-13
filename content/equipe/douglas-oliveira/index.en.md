@@ -16,12 +16,15 @@ areas:
 - Analytic Hierarquic Process (AHP)
 - Energy Transition
 projeto:
+  orientador: "Carlos Velasquez"
   tipo: "tese"
   status: "andamento"
   titulo: "GeoFREA: A Spatially Explicit and Scalable Framework for Robust Renewable Energy Siting Under Climate Change and Techno-Economic Uncertainty"
   resumo: "The aim of this thesis is to develop and evaluate GeoFREA, an open and reproducible framework that integrates land eligibility, site-level economics, climate change and thermal-fleet replacement in a single spatially explicit pipeline, in order to identify where solar PV and onshore wind expansion remains competitive and climate-resilient, and how much thermal generation it can displace, in countries of the Global North and South."
   tema: "Renewable energy siting under climate and techno-economic uncertainty"
   linha: "energias-renovaveis"
+researchgate: "https://www.researchgate.net/profile/Douglas-Silva-9"
+scholar: "https://scholar.google.com/citations?user=PLtxbAsAAAAJ"
 ---
 
 Electrical Engineer, M.S. and Ph.D. candidate in Nuclear Science and Technology and Energy Engineering at UFMG.
