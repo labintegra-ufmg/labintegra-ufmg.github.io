@@ -1,0 +1,11 @@
+{{ define "main" }}
+<section class="section"><div class="container narrow" style="text-align:center">
+  <h1 class="section-title">404</h1>
+  <p class="lead">Página não encontrada.<br><span class="muted">Page not found.</span></p>
+  <p style="margin-top:1.5rem">
+    <a class="btn btn-primary" href="{{ "/" | relURL }}">Início</a>
+    <a class="btn btn-ghost" href="{{ "/en/" | relURL }}">Home (EN)</a>
+    <a class="btn btn-ghost" href="{{ "/publicacoes/" | relURL }}">Publicações</a>
+  </p>
+</div></section>
+{{ end }}

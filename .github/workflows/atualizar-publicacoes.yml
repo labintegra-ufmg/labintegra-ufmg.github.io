@@ -1,7 +1,7 @@
 name: Atualizar publicações
 on:
   schedule:
-    - cron: "0 6 1 * *"   # todo dia 1, 03h (Brasília)
+    - cron: "0 6 * * 1"   # todo dia 1, 03h (Brasília)
   workflow_dispatch:
 permissions:
   contents: write
@@ -15,7 +15,7 @@ jobs:
         with:
           python-version: "3.12"
       - run: pip install -r requirements.txt
-      - run: python scripts/orcid_sync.py
+      - run: python scripts/orcid_sync.py && python scripts/citacoes_extra.py
         env:
           OPENALEX_MAILTO: ${{ secrets.OPENALEX_MAILTO }}
           OPENALEX_API_KEY: ${{ secrets.OPENALEX_API_KEY }}

@@ -22,7 +22,7 @@
       {{ with index (hugo.Data.equipe.stats | default dict) $id }}
         {{ with .vinculos }}<h2 class="sub">{{ i18n "profile_aff" }}</h2><ul class="plain">{{ range . }}<li>{{ . }}</li>{{ end }}</ul>{{ end }}
         {{ with .formacao }}<h2 class="sub">{{ i18n "profile_edu" }}</h2><ul class="plain">{{ range . }}<li>{{ . }}</li>{{ end }}</ul>{{ end }}
-        {{ if .obras }}<p class="stats">h-index <strong>{{ .h_index }}</strong> · {{ .obras }} {{ i18n "stats_works" }} · {{ .citacoes }} {{ i18n "cited_by" | lower }} <span class="muted">(OpenAlex)</span></p>{{ end }}
+        {{ if .obras }}<p class="stats">h-index <strong>{{ .h_index }}</strong> · {{ .obras }} {{ i18n "stats_works" }} · {{ .citacoes }} {{ i18n "cited_by" | lower }} <span class="muted">(OpenAlex · Crossref · OpenCitations)</span></p>{{ end }}
       {{ end }}
       <h2 class="sub">{{ i18n "profile_pubs" }}</h2>
       {{ $mine := slice }}

@@ -51,7 +51,7 @@ profile_areas: Research areas
 profile_links: Profiles
 no_pubs: No associated publications yet.
 
-cited_source: 'Source: OpenAlex (may differ from Google Scholar)'
+cited_source: 'Source: OpenAlex, Crossref, OpenCitations (highest value) (may differ from Google Scholar)'
 
 profile_aff: Affiliations
 profile_edu: Education
@@ -60,7 +60,7 @@ stats_works: works
 ln_more: "View line"
 ln_back: "All lines"
 ln_top: "Most cited publications"
-ln_top_sub: "The five most cited publications in this line (source: OpenAlex)."
+ln_top_sub: "The five most cited publications in this line (source: OpenAlex, Crossref, OpenCitations)."
 ln_cit: "citations"
 ln_none: "Publications for this line will appear here."
 ln_topics: "Research topics"
@@ -92,3 +92,6 @@ pj_advisor: "Advisor"
 pj_line: "Research line"
 pj_link: "View document"
 pl_title: "Members' projects"
+pr_all_types: "All types"
+pr_all_lines: "All lines"
+pr_none: "No projects for this filter."

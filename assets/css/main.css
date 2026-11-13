@@ -219,3 +219,7 @@ details.ln-all summary{cursor:pointer;font-weight:600;font-size:1.1rem}
 .proj-mini h3{font-size:1rem;line-height:1.4;margin:.6rem 0}
 .proj-mini .card-person{margin:.5rem 0 0;font-size:.9rem}
 @media (max-width:600px){.project-card dl{grid-template-columns:1fr}.project-card dt{margin-top:.5rem}}
+/* PROJ-FILTERS */
+[hidden]{display:none!important}
+.proj-filters{display:flex;flex-wrap:wrap;gap:.75rem;margin:1.5rem 0 .5rem}
+.proj-filters select{padding:.5rem .8rem;border:1px solid rgba(0,0,0,.2);border-radius:8px;background:#fff;font:inherit;max-width:100%}

@@ -1,0 +1,39 @@
+{{ define "main" }}
+{{ $lang := .Lang }}
+{{ $rel := where (where site.RegularPages "Section" "equipe") "Params.projeto" "ne" nil }}
+<section class="section"><div class="container">
+  <h1 class="section-title">{{ .Title }}</h1>
+  {{ with .Content }}<div class="prose">{{ . }}</div>{{ end }}
+  <div class="proj-filters">
+    <select id="f-tipo" aria-label="{{ i18n "pr_all_types" }}">
+      <option value="">{{ i18n "pr_all_types" }}</option>
+      {{ range slice "ic" "tcc" "dissertacao" "tese" "pesquisa" }}<option value="{{ . }}">{{ i18n (printf "pj_%s" .) }}</option>{{ end }}
+    </select>
+    <select id="f-linha" aria-label="{{ i18n "pr_all_lines" }}">
+      <option value="">{{ i18n "pr_all_lines" }}</option>
+      {{ range hugo.Data.site.linhas }}<option value="{{ .id }}">{{ index .titulo $lang }}</option>{{ end }}
+    </select>
+  </div>
+  {{ if $rel }}
+  <div class="proj-grid">
+    {{ range $rel }}
+    <a class="card card-link proj-mini" href="{{ .RelPermalink }}" data-tipo="{{ .Params.projeto.tipo | default "pesquisa" }}" data-linha="{{ .Params.projeto.linha }}">
+      <span class="badge-tipo">{{ i18n (printf "pj_%s" (.Params.projeto.tipo | default "pesquisa")) }}</span>
+      {{ with .Params.projeto.status }}<span class="badge-status">{{ i18n (printf "pj_st_%s" .) }}</span>{{ end }}
+      <h3>{{ .Params.projeto.titulo }}</h3>
+      {{ with .Params.projeto.resumo }}<p class="muted">{{ . | truncate 170 }}</p>{{ end }}
+      <p class="card-person">{{ partial "foto.html" (dict "p" . "size" "xs") }}<span>{{ .Title }}</span></p>
+    </a>
+    {{ end }}
+  </div>
+  <p id="f-none" class="muted" hidden>{{ i18n "pr_none" }}</p>
+  {{ else }}
+  <p class="muted">{{ i18n "pr_none" }}</p>
+  {{ end }}
+</div></section>
+<script>
+(function(){var t=document.getElementById('f-tipo'),l=document.getElementById('f-linha'),n=document.getElementById('f-none'),c=document.querySelectorAll('.proj-mini[data-tipo]');
+function ap(){var k=0;c.forEach(function(e){var ok=(!t.value||e.dataset.tipo===t.value)&&(!l.value||e.dataset.linha===l.value);e.hidden=!ok;if(ok)k++});if(n)n.hidden=k>0}
+t.onchange=ap;l.onchange=ap})();
+</script>
+{{ end }}
