@@ -1,0 +1,24 @@
+{{ with .Params.projeto }}
+{{ $lid := .linha | default "" }}{{ $lt := "" }}
+{{ range hugo.Data.site.linhas }}{{ if eq .id $lid }}{{ $lt = index .titulo $.Lang }}{{ end }}{{ end }}
+<section class="section"><div class="container narrow">
+  <h2 class="section-title">{{ i18n "pj_title" }}</h2>
+  <article class="project-card">
+    <div class="project-meta">
+      <span class="badge-tipo">{{ i18n (printf "pj_%s" (.tipo | default "pesquisa")) }}</span>
+      {{ with .status }}<span class="badge-status">{{ i18n (printf "pj_st_%s" .) }}</span>{{ end }}
+      {{ with .ano }}<span class="muted">{{ . }}</span>{{ end }}
+    </div>
+    <h3>{{ .titulo }}</h3>
+    {{ with .resumo }}<p>{{ . }}</p>{{ end }}
+    {{ if or .tema .orientador $lt }}
+    <dl>
+      {{ with .tema }}<dt>{{ i18n "pj_theme" }}</dt><dd>{{ . }}</dd>{{ end }}
+      {{ with .orientador }}<dt>{{ i18n "pj_advisor" }}</dt><dd>{{ . }}</dd>{{ end }}
+      {{ if $lt }}<dt>{{ i18n "pj_line" }}</dt><dd><a href="{{ printf "/pesquisa/%s/" $lid | relLangURL }}">{{ $lt }}</a></dd>{{ end }}
+    </dl>
+    {{ end }}
+    {{ with .link }}<p><a class="btn btn-ghost" href="{{ . }}" target="_blank" rel="noopener">{{ i18n "pj_link" }}</a></p>{{ end }}
+  </article>
+</div></section>
+{{ end }}

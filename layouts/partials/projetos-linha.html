@@ -1,0 +1,16 @@
+{{ $id := .id }}
+{{ $rel := where (where site.RegularPages "Section" "equipe") "Params.projeto.linha" $id }}
+{{ if $rel }}
+<section class="section"><div class="container">
+  <h2 class="section-title">{{ i18n "pl_title" }}</h2>
+  <div class="proj-grid">
+    {{ range $rel }}
+    <a class="card card-link proj-mini" href="{{ .RelPermalink }}">
+      <span class="badge-tipo">{{ i18n (printf "pj_%s" (.Params.projeto.tipo | default "pesquisa")) }}</span>
+      <h3>{{ .Params.projeto.titulo }}</h3>
+      <p class="card-person">{{ partial "foto.html" (dict "p" . "size" "xs") }}<span>{{ .Title }}</span></p>
+    </a>
+    {{ end }}
+  </div>
+</div></section>
+{{ end }}

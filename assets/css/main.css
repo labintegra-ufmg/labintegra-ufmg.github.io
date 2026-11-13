@@ -205,3 +205,17 @@ details.ln-all summary{cursor:pointer;font-weight:600;font-size:1.1rem}
 @media (max-width:700px){
   .avatar-xl{display:block;margin-inline:auto}
 }
+/* PROJETO-CARD */
+.project-card{background:#fff;border:1px solid rgba(0,0,0,.1);border-left:5px solid #0f5c63;border-radius:12px;padding:1.5rem;box-shadow:0 4px 18px rgba(0,0,0,.06)}
+.project-card h3{margin:.7rem 0;line-height:1.35}
+.project-meta{display:flex;flex-wrap:wrap;gap:.5rem;align-items:center}
+.badge-tipo,.badge-status{display:inline-block;font-size:.75rem;font-weight:600;padding:.15rem .65rem;border-radius:999px}
+.badge-tipo{background:rgba(15,92,99,.12);color:#0f5c63}
+.badge-status{background:rgba(31,138,91,.14);color:#17694a}
+.project-card dl{display:grid;grid-template-columns:auto 1fr;gap:.35rem 1rem;margin:1rem 0 0}
+.project-card dt{font-weight:600}
+.project-card dd{margin:0}
+.proj-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:1.25rem;margin-top:1rem}
+.proj-mini h3{font-size:1rem;line-height:1.4;margin:.6rem 0}
+.proj-mini .card-person{margin:.5rem 0 0;font-size:.9rem}
+@media (max-width:600px){.project-card dl{grid-template-columns:1fr}.project-card dt{margin-top:.5rem}}
