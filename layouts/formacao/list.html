@@ -1,0 +1,53 @@
+{{ define "main" }}
+{{ $team := where .Site.RegularPages "Section" "equipe" }}
+{{ $stu := sort (where $team "Params.categoria" "in" (slice "ic" "mestrando" "doutorando" "posdoc")) "Title" }}
+{{ $alu := sort (where $team "Params.categoria" "eq" "egresso") "Title" }}
+{{ $tl := slice }}{{ with hugo.Data.teses }}{{ range .defendidas }}{{ if not .ocultar }}{{ $tl = $tl | append . }}{{ end }}{{ end }}{{ end }}
+<section class="section"><div class="container narrow">
+  <h1 class="section-title">{{ .Title }}</h1>
+  <div class="prose">{{ .Content }}</div>
+</div></section>
+
+{{ if $stu }}
+<section class="section section-alt"><div class="container">
+  <h2 class="section-title">{{ i18n "fm_students" }}</h2>
+  <div class="cards">
+    {{ range $stu }}
+    <a class="card card-link" href="{{ .RelPermalink }}"><div class="card-person">{{ partial "foto.html" (dict "p" . "size" "md") }}<div><h3>{{ .Title }}</h3><p>{{ .Params.cargo }}</p></div></div></a>
+    {{ end }}
+  </div>
+</div></section>
+{{ end }}
+
+{{ if $tl }}
+<section class="section"><div class="container">
+  <h2 class="section-title">{{ i18n "fm_defenses" }}</h2>
+  <div class="table-wrap"><table class="tbl">
+    <thead><tr><th>{{ i18n "th_year" }}</th><th>{{ i18n "th_type" }}</th><th>{{ i18n "th_author" }}</th><th>{{ i18n "th_title" }}</th></tr></thead>
+    <tbody>
+    {{ range sort $tl "ano" "desc" }}
+      {{ $pg := site.GetPage (printf "/equipe/%s" .pessoa) }}
+      <tr>
+        <td>{{ .ano }}</td>
+        <td>{{ i18n (printf "pj_%s" .tipo) }}</td>
+        <td>{{ if $pg }}<a href="{{ $pg.RelPermalink }}">{{ $pg.Title }}</a>{{ else }}{{ .pessoa }}{{ end }}</td>
+        <td>{{ if .uri }}<a href="{{ .uri }}" target="_blank" rel="noopener">{{ .titulo }}</a>{{ else }}{{ .titulo }}{{ end }}</td>
+      </tr>
+    {{ end }}
+    </tbody>
+  </table></div>
+</div></section>
+{{ end }}
+
+{{ if $alu }}
+<section class="section section-alt"><div class="container">
+  <h2 class="section-title">{{ i18n "fm_alumni" }}</h2>
+  <div class="chips">{{ range $alu }}<a class="chip chip-person" href="{{ .RelPermalink }}">{{ partial "foto.html" (dict "p" . "size" "xs") }}{{ .Title }}</a>{{ end }}</div>
+</div></section>
+{{ end }}
+
+<section class="cta"><div class="container">
+  <h2>{{ i18n "fm_cta" }}</h2>
+  <a class="btn btn-accent" href="{{ "/contato/" | relLangURL }}">{{ i18n "hero_cta_contact" }}</a>
+</div></section>
+{{ end }}

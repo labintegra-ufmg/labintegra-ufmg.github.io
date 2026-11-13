@@ -22,14 +22,14 @@ jobs:
       - run: python scripts/thumbs.py
         env:
           OPENALEX_MAILTO: ${{ secrets.OPENALEX_MAILTO }}
-      - run: python scripts/enriquecer.py && python scripts/stats_locais.py
+      - run: python scripts/enriquecer.py && python scripts/stats_locais.py && (python scripts/teses_ufmg.py --backend oai --anos 15 && python scripts/teses_aplicar.py || echo "teses falhou, seguindo")
         env:
           OPENALEX_MAILTO: ${{ secrets.OPENALEX_MAILTO }}
       - name: Commit e publicação
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
-          git add data/publicacoes/auto.yaml data/equipe static/images/pubs scripts/thumbs_falhas.json
+          git add data/publicacoes/auto.yaml data/equipe static/images/pubs scripts/thumbs_falhas.json data/teses
           if [ -n "$(git status --porcelain data/publicacoes data/equipe static/images/pubs scripts/thumbs_falhas.json)" ]; then
             git config user.name "labintegra-bot"
             git config user.email "actions@users.noreply.github.com"

@@ -15,6 +15,13 @@ areas:
 - Multi-criteria Decision Analysis (MCDA)
 - Analytic Hierarquic Process (AHP)
 - Energy Transition
+projeto:
+  tipo: "tese"
+  status: "andamento"
+  titulo: "GeoFREA: A Spatially Explicit and Scalable Framework for Robust Renewable Energy Siting Under Climate Change and Techno-Economic Uncertainty"
+  resumo: "Desenvolve e avalia o GeoFREA, um framework aberto e reprodutível que integra elegibilidade do solo, economia em nível de sítio, mudanças climáticas e substituição da frota térmica em um único pipeline espacialmente explícito. O objetivo é identificar onde a expansão da energia solar fotovoltaica e da eólica onshore permanece competitiva e resiliente ao clima, e quanta geração térmica ela pode deslocar, em países do Norte e do Sul Global."
+  tema: "Localização de energias renováveis sob incerteza climática e tecno-econômica"
+  linha: "energias-renovaveis"
 ---
 
 Engenheiro Eletricista, mestre e doutorando (em andamento) em Ciências e Técnicas Nucleares e Engenharia de Energia pela UFMG.

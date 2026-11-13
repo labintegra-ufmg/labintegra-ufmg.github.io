@@ -233,3 +233,8 @@ details.ln-all summary{cursor:pointer;font-weight:600;font-size:1.1rem}
 /* TESES-LISTA */
 .thesis-list{display:grid;gap:1rem}
 .project-card.thesis h3{font-size:1.05rem}
+/* FORMACAO */
+.table-wrap{overflow-x:auto}
+.tbl{width:100%;border-collapse:collapse}
+.tbl th,.tbl td{text-align:left;padding:.7rem .8rem;border-bottom:1px solid rgba(0,0,0,.1);vertical-align:top}
+.tbl th{font-size:.85rem;text-transform:uppercase;letter-spacing:.04em;opacity:.7}
