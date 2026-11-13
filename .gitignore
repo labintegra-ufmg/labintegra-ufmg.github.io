@@ -8,3 +8,4 @@ __pycache__/
 *.bak
 fotos/*
 !fotos/LEIA-ME.txt
+scripts/teses_candidatas.yaml
