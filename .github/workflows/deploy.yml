@@ -20,6 +20,7 @@ jobs:
           hugo-version: latest
           extended: true
       - run: hugo --minify
+      - run: npx --yes pagefind --site public
       - uses: actions/upload-pages-artifact@v3
         with:
           path: public

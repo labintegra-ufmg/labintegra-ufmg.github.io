@@ -1,0 +1,42 @@
+# Teses e dissertacoes defendidas. Gerado por scripts/teses_aplicar.py; pode editar.
+# 'ocultar: true' esconde um item do site. Itens existentes nunca sao sobrescritos.
+- id: babdf550
+  pessoa: carlos-velasquez
+  tipo: tese
+  titulo: Transmutação de rejeitos radioativos em sistemas híbridos de fusão-fissão
+  ano: 2015
+  uri: https://hdl.handle.net/1843/BUBD-A3CJAT
+  resumo: A fission-fusion hybrid reactor is proposed for recycling and transmutation of highly radioactive waste. Two fusion systems were evaluated. A Tokamak, based on magnetic confinement, and another based on inertial confinement. These systems have been modified and designed to place a transmutation layer loaded with transuranic elements from spent fuel of nuclear power plants. The transmutation layer is the first presented in specific literature to be used with fuel reprocessed by the method UREX + and further spiked with depleted uranium or thorium to reduce the amount of fissile material in…
+  confianca: alta
+- id: 8072466f
+  pessoa: carlos-velasquez
+  tipo: dissertacao
+  titulo: Avaliação neutrônica de uma camada transmutadora em um sistema Tokamak
+  ano: 2013
+  uri: https://hdl.handle.net/1843/BUOS-978JZ3
+  resumo: Using MCNP5 code were simulated different models representing the ITER system. It was evaluated the two alloys used by the first wall under high neutron flux. The neutron flux and the reaction rate along the different walls were obtained and evaluated. Based on the results, it was possible to conclude the best way to represent the fusion device evaluating; the different geometrical models, the best material to be used in the first wall taking into consideration the objective of transmutation and placed the transmutation layer.
+  confianca: alta
+- id: 847bd991
+  pessoa: douglas-oliveira
+  tipo: dissertacao
+  titulo: 'Análise multicritério para viabilização de uma matriz energética de baixo carbono no Brasil: estudo de caso sobre o hidrogênio verde'
+  ano: 2025
+  uri: https://hdl.handle.net/1843/84348
+  resumo: This dissertation analyzes ways to make a low-carbon energy matrix viable in Brazil, taking green hydrogen as a case study. Although the Brazilian electricity matrix is mostly renewable, the energy sector accounts for more than 25% of net national GHG emissions, requiring decarbonization actions in line with the goals of the NDCs. Starting from the recognition of the transition as a complex socio-technical process - involving technological, institutional and cultural transformations - the study combines technical-economic analysis with a critical perspective on challenges and alternatives,…
+  confianca: alta
+- id: 50633a80
+  pessoa: jose-pericles-freire
+  tipo: dissertacao
+  titulo: 'Explorando modelos híbridos para a previsão de vento: uma análise multirregional'
+  ano: 2024
+  uri: https://hdl.handle.net/1843/79785
+  resumo: Wind energy is one of the leading low-carbon technologies for electricity generation, and Brazil has great potential for its development, especially in the Northeast and South regions. Recent studies show an interesting complementarity between wind and hydropower, as during drought periods, wind generation tends to be higher due to increased wind speeds, and vice versa. In 2022, wind energy became the second most used source in the Brazilian electricity matrix, accounting for 11.8% (or 25.6 GW) of the installed capacity, behind only hydropower, which represents 61.9%. The National…
+  confianca: alta
+- id: 4112f50f
+  pessoa: ruan-luzia
+  tipo: dissertacao
+  titulo: 'Adapting the OnStove model to the Brazilian context: a geographical information systems based clean cooking analysis'
+  ano: 2026
+  uri: https://hdl.handle.net/1843/2282
+  resumo: De acordo com o Balanço Energético Brasileiro, aproximadamente 25% do consumo doméstico de energia no Brasil é derivado de carvão vegetal ou lenha, evidenciando uma dependência significativa da biomassa tradicional para as necessidades residenciais. A Organização Mundial da Saúde alerta que o uso desses combustíveis sólidos em residências representa sérios riscos à saúde, principalmente devido à poluição do ar interior proveniente das atividades de cocção, um problema particularmente acentuado nas regiões Norte e Nordeste do país, onde a dependência desses combustíveis é maior. Enfrentar…
+  confianca: alta

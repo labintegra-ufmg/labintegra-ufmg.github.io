@@ -1,6 +1,8 @@
 {{ define "main" }}
 {{ $lang := .Lang }}
 {{ $rel := where (where site.RegularPages "Section" "equipe") "Params.projeto" "ne" nil }}
+{{ $tl := slice }}
+{{ with hugo.Data.teses }}{{ range .defendidas }}{{ if not .ocultar }}{{ $tl = $tl | append . }}{{ end }}{{ end }}{{ end }}
 <section class="section"><div class="container">
   <h1 class="section-title">{{ .Title }}</h1>
   {{ with .Content }}<div class="prose">{{ . }}</div>{{ end }}
@@ -26,10 +28,27 @@
     </a>
     {{ end }}
   </div>
-  <p id="f-none" class="muted" hidden>{{ i18n "pr_none" }}</p>
-  {{ else }}
-  <p class="muted">{{ i18n "pr_none" }}</p>
   {{ end }}
+  {{ if $tl }}
+  <h2 class="section-title" style="margin-top:2.5rem">{{ i18n "pr_defended" }}</h2>
+  <div class="proj-grid">
+    {{ range sort $tl "ano" "desc" }}
+    {{ $pg := site.GetPage (printf "/equipe/%s" .pessoa) }}
+    {{ if $pg }}
+    <a class="card card-link proj-mini" href="{{ $pg.RelPermalink }}" data-tipo="{{ .tipo }}" data-linha="{{ .linha | default "" }}">
+      <span class="badge-tipo">{{ i18n (printf "pj_%s" .tipo) }}</span>
+      <span class="badge-status">{{ i18n "pj_st_concluido" }}</span>
+      {{ with .ano }}<span class="muted">{{ . }}</span>{{ end }}
+      <h3>{{ .titulo }}</h3>
+      {{ with .resumo }}<p class="muted">{{ . | truncate 170 }}</p>{{ end }}
+      <p class="card-person">{{ partial "foto.html" (dict "p" $pg "size" "xs") }}<span>{{ $pg.Title }}</span></p>
+    </a>
+    {{ end }}
+    {{ end }}
+  </div>
+  {{ end }}
+  {{ if and (not $rel) (not $tl) }}<p class="muted">{{ i18n "pr_none" }}</p>{{ end }}
+  <p id="f-none" class="muted" hidden>{{ i18n "pr_none" }}</p>
 </div></section>
 <script>
 (function(){var t=document.getElementById('f-tipo'),l=document.getElementById('f-linha'),n=document.getElementById('f-none'),c=document.querySelectorAll('.proj-mini[data-tipo]');

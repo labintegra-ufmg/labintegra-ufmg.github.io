@@ -1,0 +1,22 @@
+{{ $id := .File.ContentBaseName }}
+{{ $t := slice }}
+{{ with hugo.Data.teses }}{{ range .defendidas }}{{ if and (eq .pessoa $id) (not .ocultar) }}{{ $t = $t | append . }}{{ end }}{{ end }}{{ end }}
+{{ if $t }}
+<section class="section"><div class="container narrow">
+  <h2 class="section-title">{{ i18n "te_title" }}</h2>
+  <div class="thesis-list">
+    {{ range sort $t "ano" "desc" }}
+    <article class="project-card thesis">
+      <div class="project-meta">
+        <span class="badge-tipo">{{ i18n (printf "pj_%s" .tipo) }}</span>
+        <span class="badge-status">{{ i18n "pj_st_concluido" }}</span>
+        {{ with .ano }}<span class="muted">{{ . }}</span>{{ end }}
+      </div>
+      <h3>{{ .titulo }}</h3>
+      {{ with .resumo }}<p>{{ . | truncate 380 }}</p>{{ end }}
+      {{ with .uri }}<p><a class="btn btn-ghost" href="{{ . }}" target="_blank" rel="noopener">{{ i18n "te_link" }}</a></p>{{ end }}
+    </article>
+    {{ end }}
+  </div>
+</div></section>
+{{ end }}

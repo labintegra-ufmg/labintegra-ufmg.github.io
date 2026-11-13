@@ -58,12 +58,13 @@
   </div>
 </section>
 
+{{ partial "projetos-linha.html" (dict "id" $id) }}
 {{ if $ids }}
 <section class="section section-alt">
   <div class="container">
     <h2 class="section-title">{{ i18n "ln_people" }}</h2>
     <div class="chips">
-      {{ range $ids }}{{ with $.Site.GetPage (printf "/equipe/%s" .) }}<a class="chip" href="{{ .RelPermalink }}">{{ .Title }}</a>{{ end }}{{ end }}
+      {{ range $ids }}{{ with $.Site.GetPage (printf "/equipe/%s" .) }}<a class="chip chip-person" href="{{ .RelPermalink }}">{{ partial "foto.html" (dict "p" . "size" "xs") }}{{ .Title }}</a>{{ end }}{{ end }}
     </div>
   </div>
 </section>

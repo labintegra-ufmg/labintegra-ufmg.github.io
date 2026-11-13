@@ -14,7 +14,7 @@
     </div>
     {{ with $.Site.GetPage "/equipe/carlos-velasquez" }}
     <div class="card">
-      <h3>{{ i18n "ct_coord" }}</h3>
+      <h3>{{ i18n "ct_coord" }}</h3><p>{{ partial "foto.html" (dict "p" . "size" "md") }}</p>
       <p><a href="{{ .RelPermalink }}">{{ .Title }}</a><br><span class="muted">{{ .Params.cargo }}</span></p>
       <p>
         {{ with $c.coordenacao_email }}<a href="mailto:{{ . }}">{{ . }}</a><br>{{ end }}

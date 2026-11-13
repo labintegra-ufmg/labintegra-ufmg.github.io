@@ -9,13 +9,15 @@
   {{ range .AllTranslations }}<link rel="alternate" hreflang="{{ .Lang }}" href="{{ .Permalink }}">
   {{ end }}
   <link rel="icon" href="{{ "logo/logo.jpg" | relURL }}">
+  {{ partial "seo.html" . }}
+  {{ partial "analytics.html" . }}
   {{ $css := resources.Get "css/main.css" | minify | fingerprint }}
   <link rel="stylesheet" href="{{ $css.RelPermalink }}">
 </head>
 <body>
   <a class="skip" href="#conteudo">{{ i18n "skip" }}</a>
   {{ partial "header.html" . }}
-  <main id="conteudo">{{ block "main" . }}{{ end }}</main>
+  <main id="conteudo" data-pagefind-body>{{ block "main" . }}{{ end }}</main>
   {{ partial "footer.html" . }}
   {{ $js := resources.Get "js/main.js" | minify | fingerprint }}
   <script src="{{ $js.RelPermalink }}" defer></script>

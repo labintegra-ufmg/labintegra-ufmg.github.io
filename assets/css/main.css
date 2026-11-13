@@ -230,3 +230,6 @@ details.ln-all summary{cursor:pointer;font-weight:600;font-size:1.1rem}
 .partner{box-sizing:border-box;display:inline-flex;align-items:center;justify-content:center;height:64px;padding:.5rem 1rem;background:#fff;border:1px solid rgba(0,0,0,.12);border-radius:10px;color:#17323a;text-decoration:none;font-weight:600;max-width:100%}
 .partner img{display:block;height:100%;width:auto;max-width:170px;object-fit:contain}
 .partner:hover{box-shadow:0 4px 14px rgba(0,0,0,.15)}
+/* TESES-LISTA */
+.thesis-list{display:grid;gap:1rem}
+.project-card.thesis h3{font-size:1.05rem}
