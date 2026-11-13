@@ -22,7 +22,7 @@ jobs:
       - run: python scripts/thumbs.py
         env:
           OPENALEX_MAILTO: ${{ secrets.OPENALEX_MAILTO }}
-      - run: python scripts/enriquecer.py
+      - run: python scripts/enriquecer.py && python scripts/stats_locais.py
         env:
           OPENALEX_MAILTO: ${{ secrets.OPENALEX_MAILTO }}
       - name: Commit e publicação
