@@ -37,3 +37,8 @@
   name = "Contact"
   pageRef = "/contato"
   weight = 80
+
+[[main]]
+  name = "Search"
+  pageRef = "/busca"
+  weight = 90

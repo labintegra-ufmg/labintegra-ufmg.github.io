@@ -1,0 +1,11 @@
+{{ $desc := .Description | default .Params.cargo | default site.Params.description | default site.Title }}
+{{ $img := "logo/logo.jpg" | absURL }}
+{{ if and .File (eq .Section "equipe") }}{{ $f := printf "static/images/equipe/%s.jpg" .File.ContentBaseName }}{{ if os.FileExists $f }}{{ $img = printf "images/equipe/%s.jpg" .File.ContentBaseName | absURL }}{{ end }}{{ end }}
+<meta property="og:site_name" content="{{ site.Title }}">
+<meta property="og:title" content="{{ if .IsHome }}{{ site.Title }}{{ else }}{{ .Title }}{{ end }}">
+<meta property="og:description" content="{{ $desc | plainify | truncate 200 }}">
+<meta property="og:type" content="{{ if .IsHome }}website{{ else }}article{{ end }}">
+<meta property="og:url" content="{{ .Permalink }}">
+<meta property="og:locale" content="{{ if eq .Lang "en" }}en_US{{ else }}pt_BR{{ end }}">
+<meta property="og:image" content="{{ $img }}">
+<meta name="twitter:card" content="summary">

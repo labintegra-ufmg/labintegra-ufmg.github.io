@@ -1,0 +1,13 @@
+{{ $list := hugo.Data.site.parceiros }}
+{{ if $list }}
+<div class="partners">
+  <p class="partners-title">{{ i18n "partners_title" }}</p>
+  <div class="partners-row">
+    {{ range $list }}
+      {{ $id := .id }}{{ $src := "" }}
+      {{ range slice "svg" "png" "jpg" "jpeg" "webp" }}{{ if and (not $src) (os.FileExists (printf "static/images/parceiros/%s.%s" $id .)) }}{{ $src = printf "/images/parceiros/%s.%s" $id . | relURL }}{{ end }}{{ end }}
+      <a class="partner" href="{{ .url }}" target="_blank" rel="noopener" title="{{ .nome }}">{{ if $src }}<img src="{{ $src }}" alt="{{ .nome }}" loading="lazy">{{ else }}<span>{{ .nome }}</span>{{ end }}</a>
+    {{ end }}
+  </div>
+</div>
+{{ end }}

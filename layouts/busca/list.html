@@ -1,0 +1,10 @@
+{{ define "main" }}
+<section class="section" data-pagefind-ignore><div class="container narrow">
+  <h1 class="section-title">{{ .Title }}</h1>
+  <link href="{{ "pagefind/pagefind-ui.css" | relURL }}" rel="stylesheet">
+  <div id="search"></div>
+  <p id="search-off" class="muted" hidden>{{ i18n "sr_off" }}</p>
+  <script src="{{ "pagefind/pagefind-ui.js" | relURL }}" onerror="document.getElementById('search-off').hidden=false"></script>
+  <script>window.addEventListener('DOMContentLoaded',function(){if(window.PagefindUI){new PagefindUI({element:'#search',showSubResults:true,showImages:false})}});</script>
+</div></section>
+{{ end }}

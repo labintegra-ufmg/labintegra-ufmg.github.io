@@ -1,0 +1,4 @@
+- { id: "ufmg",    nome: "UFMG",    url: "https://ufmg.br" }
+- { id: "cnpq",    nome: "CNPq",    url: "https://www.gov.br/cnpq/pt-br" }
+- { id: "capes",   nome: "CAPES",   url: "https://www.gov.br/capes/pt-br" }
+- { id: "fapemig", nome: "FAPEMIG", url: "https://fapemig.br/" }

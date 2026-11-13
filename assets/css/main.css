@@ -223,3 +223,10 @@ details.ln-all summary{cursor:pointer;font-weight:600;font-size:1.1rem}
 [hidden]{display:none!important}
 .proj-filters{display:flex;flex-wrap:wrap;gap:.75rem;margin:1.5rem 0 .5rem}
 .proj-filters select{padding:.5rem .8rem;border:1px solid rgba(0,0,0,.2);border-radius:8px;background:#fff;font:inherit;max-width:100%}
+/* PARCEIROS */
+.partners{margin:1.5rem 0}
+.partners-title{font-weight:700;margin:0 0 .8rem}
+.partners-row{display:flex;flex-wrap:wrap;gap:.8rem;align-items:center}
+.partner{box-sizing:border-box;display:inline-flex;align-items:center;justify-content:center;height:64px;padding:.5rem 1rem;background:#fff;border:1px solid rgba(0,0,0,.12);border-radius:10px;color:#17323a;text-decoration:none;font-weight:600;max-width:100%}
+.partner img{display:block;height:100%;width:auto;max-width:170px;object-fit:contain}
+.partner:hover{box-shadow:0 4px 14px rgba(0,0,0,.15)}
