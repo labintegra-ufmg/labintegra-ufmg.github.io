@@ -1,7 +1,8 @@
 {{ $href := .url | default "" }}
 {{ if and (not $href) .doi }}{{ $href = printf "https://doi.org/%s" .doi }}{{ end }}
+{{ $tit := .titulo }}{{ $doi := .doi | default "" }}{{ if and (not $doi) (hasPrefix $href "https://doi.org/") }}{{ $doi = strings.TrimPrefix "https://doi.org/" $href }}{{ end }}
 <article class="pub" data-ano="{{ .ano }}" data-tipo="{{ .tipo }}" data-q="{{ printf "%s %s %s" .titulo (delimit (.autores | default slice) " ") (.veiculo | default "") | lower }}">
-  {{ $img := .imagem | default "" }}{{ if not $img }}{{ $try := printf "images/pubs/%s.jpg" (.id | default "x") }}{{ if os.FileExists (printf "static/%s" $try) }}{{ $img = $try }}{{ end }}{{ end }}{{ with $img }}<a class="pub-thumb-link" {{ if $href }}href="{{ $href }}" target="_blank" rel="noopener"{{ end }}><img class="pub-thumb" src="{{ . | relURL }}" alt="" loading="lazy"></a>{{ end }}
+  {{ $img := .imagem | default "" }}{{ if not $img }}{{ $try := printf "images/pubs/%s.jpg" (.id | default "x") }}{{ if os.FileExists (printf "static/%s" $try) }}{{ $img = $try }}{{ end }}{{ end }}{{ with $img }}<a class="pub-thumb-link" {{ if $href }}href="{{ $href }}" target="_blank" rel="noopener"{{ end }}><img class="pub-thumb" src="{{ . | relURL }}" alt="{{ $tit }}" loading="lazy"></a>{{ end }}
   <div class="pub-body">
     <div class="badges">
       <span class="badge">{{ i18n (printf "tipo_%s" (.tipo | default "outro")) }}</span>
@@ -10,7 +11,7 @@
     </div>
     <h3>{{ if $href }}<a href="{{ $href }}" target="_blank" rel="noopener">{{ .titulo }}</a>{{ else }}{{ .titulo }}{{ end }}</h3>
     <p class="pub-authors">{{ delimit (.autores | default slice) ", " }}</p>
-    <p class="pub-venue">{{ with .veiculo }}<em>{{ . }}</em> · {{ end }}{{ .ano }}</p>
+    <p class="pub-venue">{{ with .veiculo }}<em>{{ . }}</em> · {{ end }}{{ .ano }}{{ with $doi }} <button type="button" class="btn-cite" data-doi="{{ . }}"></button>{{ end }}</p>
     {{ with .resumo }}
     <details class="abstract">
       <summary>{{ i18n "abstract" }}</summary>
