@@ -102,13 +102,28 @@
     }
     if(dlg.showModal) dlg.showModal(); else dlg.setAttribute('open','');
   }
+  var cards=new Map();
   document.querySelectorAll('a[href*="doi.org/"]').forEach(function(a){
-    if(a.closest('nav,header,footer')||a.dataset.cite) return;
+    if(a.closest('nav,header,footer')) return;
     var m=a.href.match(/doi\.org\/(10\.[^?#]+)/i); if(!m) return;
-    var doi=decodeURIComponent(m[1]); a.dataset.cite='1';
-    var b=document.createElement('button'); b.type='button'; b.className='btn-cite';
-    b.textContent=T.cite; b.title=T.tit; b.setAttribute('aria-label',T.tit); b.setAttribute('aria-haspopup','dialog');
-    a.insertAdjacentElement('afterend',b);
-    b.addEventListener('click',function(){abrir(doi);});
+    var n=a.parentElement,card=null;
+    for(var k=0;n&&k<8;k++,n=n.parentElement){ if(n.querySelector('h2,h3,h4')){card=n;break;} }
+    if(!card) card=a.parentElement;
+    var doi=decodeURIComponent(m[1]);
+    if(!cards.has(card)) cards.set(card,{});
+    var g=cards.get(card); (g[doi]=g[doi]||[]).push(a);
+  });
+  cards.forEach(function(g){
+    Object.keys(g).forEach(function(doi){
+      var best=null,bs=-9;
+      g[doi].forEach(function(a){
+        var s=a.querySelector('img')?-2:(a.closest('h1,h2,h3,h4')?-1:0);
+        if(s>=bs){bs=s;best=a;}
+      });
+      var b=document.createElement('button'); b.type='button'; b.className='btn-cite';
+      b.textContent=T.cite; b.title=T.tit; b.setAttribute('aria-label',T.tit); b.setAttribute('aria-haspopup','dialog');
+      best.insertAdjacentElement('afterend',b);
+      b.addEventListener('click',function(){abrir(doi);});
+    });
   });
 })();
