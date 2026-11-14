@@ -1,0 +1,9 @@
+{{ $en := eq site.Language.Lang "en" }}
+{{ with hugo.Data.site.institucional }}{{ $i := . }}
+<div class="inst-extra">
+  {{ with $i.programa }}{{ $nome := cond $en .en .pt }}<span>{{ if $i.programa_url }}<a href="{{ $i.programa_url }}" target="_blank" rel="noopener">{{ $nome }}</a>{{ else }}{{ $nome }}{{ end }}</span>{{ end }}
+  {{ with $i.departamento }}{{ $d := cond $en .en .pt }}{{ if $d }}<span>{{ $d }}</span>{{ end }}{{ end }}
+  {{ with $i.dgp_url }}<a href="{{ . }}" target="_blank" rel="noopener">{{ if $en }}CNPq Research Group Directory{{ else }}Diretório dos Grupos de Pesquisa (CNPq){{ end }}</a>{{ end }}
+  {{ with $i.github }}<a href="{{ . }}" target="_blank" rel="noopener" aria-label="GitHub"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .3a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2c-3.3.7-4-1.6-4-1.6-.6-1.4-1.4-1.8-1.4-1.8-1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.8 1.3 3.5 1 0-.8.4-1.3.7-1.6-2.7-.3-5.5-1.3-5.5-5.9 0-1.3.5-2.4 1.2-3.2 0-.4-.5-1.6.2-3.2 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C17 4.7 18 5 18 5c.7 1.6.2 2.9.1 3.2.8.8 1.2 1.9 1.2 3.2 0 4.6-2.8 5.6-5.5 5.9.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 .3"/></svg>GitHub</a>{{ end }}
+</div>
+{{ end }}

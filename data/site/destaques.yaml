@@ -1,15 +1,10 @@
-- tipo: noticia
-  data: "2026-01-15"
-  titulo: { pt-br: "Novo site do LabIntegra no ar", en: "New LabIntegra website is live" }
-  texto:
-    pt-br: "Conheça as linhas de pesquisa, a equipe e as publicações do laboratório."
-    en: "Explore the laboratory's research lines, team and publications."
-  link: "/pesquisa/"
 - tipo: projeto
   exemplo: true
-  data: "2026-01-05"
-  titulo: { pt-br: "projeto de planejamento energético", en: "Example: energy planning project" }
+  data: '2026-01-05'
+  titulo:
+    pt-br: projeto de planejamento energético
+    en: 'Example: energy planning project'
   texto:
-    pt-br: "Projetos em andamento e seus resultados serão apresentados aqui."
-    en: "Ongoing projects and their results will be presented here."
-  link: "/projetos/"
+    pt-br: Projetos em andamento e seus resultados serão apresentados aqui.
+    en: Ongoing projects and their results will be presented here.
+  link: /projetos/

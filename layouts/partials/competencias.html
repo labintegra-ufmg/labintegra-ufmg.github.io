@@ -1,0 +1,14 @@
+{{ $en := eq site.Language.Lang "en" }}
+{{ with hugo.Data.site.competencias }}
+<section class="pdi" aria-labelledby="pdi-t">
+  <h2 id="pdi-t">{{ if $en }}{{ .titulo.en }}{{ else }}{{ .titulo.pt }}{{ end }}</h2>
+  <p class="pdi-sub">{{ if $en }}{{ .subtitulo.en }}{{ else }}{{ .subtitulo.pt }}{{ end }}</p>
+  <div class="pdi-grid">
+    {{ range .itens }}<div class="pdi-card"><h3>{{ if $en }}{{ .t.en }}{{ else }}{{ .t.pt }}{{ end }}</h3><p>{{ if $en }}{{ .d.en }}{{ else }}{{ .d.pt }}{{ end }}</p></div>{{ end }}
+  </div>
+  <div class="pdi-parc">
+    <h3>{{ if $en }}{{ .parcerias_titulo.en }}{{ else }}{{ .parcerias_titulo.pt }}{{ end }}</h3>
+    <ul>{{ range .parcerias }}<li>{{ if $en }}{{ .en }}{{ else }}{{ .pt }}{{ end }}</li>{{ end }}</ul>
+  </div>
+</section>
+{{ end }}

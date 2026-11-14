@@ -53,3 +53,47 @@
   });
   apply();
 })();
+
+/* PDI-CITAR */
+;(function(){
+  var en=(document.documentElement.lang||'').indexOf('en')===0;
+  var T=en?{cite:'Cite (BibTeX)',copy:'Copy',copied:'Copied',load:'Loading…',err:'BibTeX unavailable'}
+          :{cite:'Citar (BibTeX)',copy:'Copiar',copied:'Copiado',load:'Carregando…',err:'BibTeX indisponível'};
+  document.querySelectorAll('img[src*="/images/pubs/"]').forEach(function(img){
+    if(img.getAttribute('alt')) return;
+    var n=img.parentElement,h=null;
+    for(var k=0;n&&k<6&&!h;k++,n=n.parentElement){
+      if(n.querySelectorAll('img[src*="/images/pubs/"]').length>1) break;
+      h=n.querySelector('h2,h3,h4');
+    }
+    if(h) img.setAttribute('alt',h.textContent.trim());
+  });
+  document.querySelectorAll('a[href*="doi.org/"]').forEach(function(a){
+    if(a.closest('nav,header,footer')||a.dataset.cite) return;
+    var m=a.href.match(/doi\.org\/(10\.[^?#]+)/i); if(!m) return;
+    var doi=decodeURIComponent(m[1]); a.dataset.cite='1';
+    var b=document.createElement('button'); b.type='button'; b.className='btn-cite';
+    b.textContent=T.cite; b.setAttribute('aria-expanded','false');
+    var box=document.createElement('div'); box.className='cite-box'; box.hidden=true;
+    a.insertAdjacentElement('afterend',b); b.insertAdjacentElement('afterend',box);
+    b.addEventListener('click',function(){
+      var abrir=box.hidden; box.hidden=!abrir; b.setAttribute('aria-expanded',String(abrir));
+      if(!abrir||box.dataset.ok) return;
+      box.textContent=T.load;
+      fetch('https://api.crossref.org/works/'+encodeURI(doi)+'/transform/application/x-bibtex')
+        .then(function(r){if(!r.ok) throw 0; return r.text();})
+        .then(function(t){
+          box.textContent='';
+          var pre=document.createElement('pre'); pre.textContent=t.trim();
+          var c=document.createElement('button'); c.type='button'; c.className='btn-cite'; c.style.marginLeft='0'; c.textContent=T.copy;
+          c.addEventListener('click',function(){
+            navigator.clipboard.writeText(pre.textContent).then(function(){
+              c.textContent=T.copied; setTimeout(function(){c.textContent=T.copy},1500);
+            });
+          });
+          box.appendChild(pre); box.appendChild(c); box.dataset.ok='1';
+        })
+        .catch(function(){box.textContent=T.err;});
+    });
+  });
+})();

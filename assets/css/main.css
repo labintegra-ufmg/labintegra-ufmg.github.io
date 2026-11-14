@@ -238,3 +238,25 @@ details.ln-all summary{cursor:pointer;font-weight:600;font-size:1.1rem}
 .tbl{width:100%;border-collapse:collapse}
 .tbl th,.tbl td{text-align:left;padding:.7rem .8rem;border-bottom:1px solid rgba(0,0,0,.1);vertical-align:top}
 .tbl th{font-size:.85rem;text-transform:uppercase;letter-spacing:.04em;opacity:.7}
+
+/* PDI-BLOCO */
+.pdi{max-width:1100px;margin:3rem auto;padding:0 1rem}
+.pdi h2{margin-bottom:.25rem}
+.pdi-sub{opacity:.8;margin:0 0 1.25rem}
+.pdi-grid{display:grid;gap:1rem;grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
+.pdi-card{border:1px solid rgba(128,128,128,.28);border-radius:12px;padding:1rem 1.1rem}
+.pdi-card h3{margin:.1rem 0 .4rem;font-size:1.05rem}
+.pdi-card p{margin:0;font-size:.95rem;opacity:.9}
+.pdi-parc{margin-top:1.5rem;border-left:4px solid rgba(128,128,128,.5);padding:.2rem 0 .2rem 1rem}
+.pdi-parc h3{margin:0}
+.pdi-parc ul{margin:.4rem 0 0;padding-left:1.1rem}
+.inst-extra{margin-top:1rem;font-size:.9rem;display:flex;flex-wrap:wrap;gap:.4rem 1.2rem;align-items:center}
+.inst-extra a{display:inline-flex;gap:.35rem;align-items:center}
+.inst-extra svg{width:1.1em;height:1.1em;fill:currentColor}
+.btn-cite{font:inherit;font-size:.8rem;cursor:pointer;margin-left:.6rem;padding:.1rem .6rem;border:1px solid rgba(128,128,128,.5);border-radius:999px;background:transparent;color:inherit}
+.btn-cite:hover,.btn-cite:focus-visible{background:rgba(128,128,128,.15)}
+.cite-box{margin:.5rem 0}
+.cite-box pre{white-space:pre-wrap;word-break:break-word;font-size:.78rem;padding:.6rem;border:1px solid rgba(128,128,128,.3);border-radius:8px;margin:0 0 .4rem;user-select:all}
+.skip-pdi{position:absolute;left:-999px}
+.skip-pdi:focus{left:8px;top:8px;z-index:100;background:#fff;color:#000;padding:.5rem .8rem}
+main:focus{outline:none}

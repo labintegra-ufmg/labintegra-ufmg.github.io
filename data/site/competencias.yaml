@@ -1,0 +1,26 @@
+titulo:
+  pt: "Competências e serviços de PD&I"
+  en: "R&D&I capabilities and services"
+subtitulo:
+  pt: "O que o grupo entrega além de artigos: modelos, métodos e ferramentas aplicáveis."
+  en: "What the group delivers beyond papers: models, methods and tools ready to apply."
+itens:
+  - t: {pt: "Modelagem geoespacial (SIG)", en: "Geospatial modelling (GIS)"}
+    d: {pt: "Mapeamento de potencial renovável, acesso à energia e cozinha limpa, com dados georreferenciados.", en: "Renewable potential mapping, energy access and clean cooking, with georeferenced data."}
+  - t: {pt: "Planejamento energético e decisão multicritério", en: "Energy planning and multicriteria decision"}
+    d: {pt: "Cenários, indicadores e análise multicritério para matrizes energéticas de baixo carbono.", en: "Scenarios, indicators and multicriteria analysis for low-carbon energy matrices."}
+  - t: {pt: "Previsão com IA e aprendizado de máquina", en: "AI and machine-learning forecasting"}
+    d: {pt: "Modelos híbridos para previsão de vento e de carga elétrica.", en: "Hybrid models for wind and electric load forecasting."}
+  - t: {pt: "Energias renováveis", en: "Renewable energy"}
+    d: {pt: "Avaliação de potencial solar fotovoltaico, eólico e integração à rede.", en: "Assessment of solar PV and wind potential and grid integration."}
+  - t: {pt: "Resiliência de infraestrutura crítica", en: "Critical infrastructure resilience"}
+    d: {pt: "Análise de vulnerabilidade de sistemas de energia e conexão com os ODS.", en: "Vulnerability analysis of energy systems and links to the SDGs."}
+  - t: {pt: "Ciência aberta", en: "Open science"}
+    d: {pt: "Publicações, dados e códigos abertos, com reprodutibilidade dos resultados.", en: "Open publications, data and code, with reproducible results."}
+parcerias_titulo:
+  pt: "Formas de parceria"
+  en: "Ways to partner with us"
+parcerias:
+  - {pt: "Projetos de PD&I com empresas e agências de fomento.", en: "R&D&I projects with companies and funding agencies."}
+  - {pt: "Cooperação acadêmica nacional e internacional.", en: "National and international academic cooperation."}
+  - {pt: "Oportunidades de Iniciação Científica, Mestrado e Doutorado.", en: "Undergraduate research, Master's and PhD opportunities."}
