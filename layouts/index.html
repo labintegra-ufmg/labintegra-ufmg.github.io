@@ -41,7 +41,7 @@
       </div>
       <div class="panel-ctrl">
         <button class="prev" aria-label="{{ i18n "prev" }}">‹</button>
-        <div class="dots">{{ range $i, $d := . }}<button class="dot{{ if eq $i 0 }} active{{ end }}" aria-label="{{ add $i 1 }}"></button>{{ end }}</div>
+        <div class="dots">{{ range $i, $d := . }}<button class="dot{{ if eq $i 0 }} active{{ end }}" aria-label="{{ if eq site.Language.Lang "en" }}Highlight{{ else }}Destaque{{ end }} {{ add $i 1 }}"></button>{{ end }}</div>
         <button class="next" aria-label="{{ i18n "next" }}">›</button>
       </div>
     </aside>
