@@ -57,8 +57,8 @@
 /* PDI-CITAR */
 ;(function(){
   var en=(document.documentElement.lang||'').indexOf('en')===0;
-  var T=en?{cite:'Cite (BibTeX)',copy:'Copy',copied:'Copied',load:'Loading…',err:'BibTeX unavailable'}
-          :{cite:'Citar (BibTeX)',copy:'Copiar',copied:'Copiado',load:'Carregando…',err:'BibTeX indisponível'};
+  var T=en?{cite:'Cite',tit:'Cite (BibTeX)',copy:'Copy',copied:'Copied',load:'Loading…',err:'BibTeX unavailable',close:'Close'}
+          :{cite:'Citar',tit:'Citar (BibTeX)',copy:'Copiar',copied:'Copiado',load:'Carregando…',err:'BibTeX indisponível',close:'Fechar'};
   document.querySelectorAll('img[src*="/images/pubs/"]').forEach(function(img){
     if(img.getAttribute('alt')) return;
     var n=img.parentElement,h=null;
@@ -68,32 +68,47 @@
     }
     if(h) img.setAttribute('alt',h.textContent.trim());
   });
+  var dlg=null,pre,cp,cache={};
+  function build(){
+    dlg=document.createElement('dialog'); dlg.className='cite-dlg'; dlg.setAttribute('aria-label',T.tit);
+    var h=document.createElement('div'); h.className='cd-h';
+    var s=document.createElement('strong'); s.textContent=T.tit;
+    var x=document.createElement('button'); x.type='button'; x.className='cd-x'; x.setAttribute('aria-label',T.close); x.textContent='×';
+    h.appendChild(s); h.appendChild(x);
+    pre=document.createElement('pre'); pre.className='cd-b';
+    var f=document.createElement('div'); f.className='cd-f';
+    cp=document.createElement('button'); cp.type='button'; cp.className='cd-c'; cp.textContent=T.copy;
+    f.appendChild(cp);
+    dlg.appendChild(h); dlg.appendChild(pre); dlg.appendChild(f);
+    document.body.appendChild(dlg);
+    x.addEventListener('click',function(){dlg.close();});
+    dlg.addEventListener('click',function(e){if(e.target===dlg) dlg.close();});
+    cp.addEventListener('click',function(){
+      var done=function(){cp.textContent=T.copied; setTimeout(function(){cp.textContent=T.copy},1500);};
+      if(navigator.clipboard) navigator.clipboard.writeText(pre.textContent).then(done);
+      else{var r=document.createRange(); r.selectNodeContents(pre); var q=getSelection(); q.removeAllRanges(); q.addRange(r); document.execCommand('copy'); done();}
+    });
+  }
+  function abrir(doi){
+    if(!dlg) build();
+    cp.textContent=T.copy;
+    if(cache[doi]){pre.textContent=cache[doi]; cp.disabled=false;}
+    else{
+      pre.textContent=T.load; cp.disabled=true;
+      fetch('https://api.crossref.org/works/'+encodeURI(doi)+'/transform/application/x-bibtex')
+        .then(function(r){if(!r.ok) throw 0; return r.text();})
+        .then(function(b){cache[doi]=b.trim(); pre.textContent=cache[doi]; cp.disabled=false;})
+        .catch(function(){pre.textContent=T.err;});
+    }
+    if(dlg.showModal) dlg.showModal(); else dlg.setAttribute('open','');
+  }
   document.querySelectorAll('a[href*="doi.org/"]').forEach(function(a){
     if(a.closest('nav,header,footer')||a.dataset.cite) return;
     var m=a.href.match(/doi\.org\/(10\.[^?#]+)/i); if(!m) return;
     var doi=decodeURIComponent(m[1]); a.dataset.cite='1';
     var b=document.createElement('button'); b.type='button'; b.className='btn-cite';
-    b.textContent=T.cite; b.setAttribute('aria-expanded','false');
-    var box=document.createElement('div'); box.className='cite-box'; box.hidden=true;
-    a.insertAdjacentElement('afterend',b); b.insertAdjacentElement('afterend',box);
-    b.addEventListener('click',function(){
-      var abrir=box.hidden; box.hidden=!abrir; b.setAttribute('aria-expanded',String(abrir));
-      if(!abrir||box.dataset.ok) return;
-      box.textContent=T.load;
-      fetch('https://api.crossref.org/works/'+encodeURI(doi)+'/transform/application/x-bibtex')
-        .then(function(r){if(!r.ok) throw 0; return r.text();})
-        .then(function(t){
-          box.textContent='';
-          var pre=document.createElement('pre'); pre.textContent=t.trim();
-          var c=document.createElement('button'); c.type='button'; c.className='btn-cite'; c.style.marginLeft='0'; c.textContent=T.copy;
-          c.addEventListener('click',function(){
-            navigator.clipboard.writeText(pre.textContent).then(function(){
-              c.textContent=T.copied; setTimeout(function(){c.textContent=T.copy},1500);
-            });
-          });
-          box.appendChild(pre); box.appendChild(c); box.dataset.ok='1';
-        })
-        .catch(function(){box.textContent=T.err;});
-    });
+    b.textContent=T.cite; b.title=T.tit; b.setAttribute('aria-label',T.tit); b.setAttribute('aria-haspopup','dialog');
+    a.insertAdjacentElement('afterend',b);
+    b.addEventListener('click',function(){abrir(doi);});
   });
 })();
