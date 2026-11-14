@@ -10,7 +10,7 @@
   function show(n) {
     i = (n + slides.length) % slides.length;
     slides.forEach(function (s, k) { s.classList.toggle('active', k === i); });
-    dots.forEach(function (d, k) { d.classList.toggle('active', k === i); });
+    dots.forEach(function (d, k) { d.classList.toggle('active', k === i); if (k === i) d.setAttribute('aria-current', 'true'); else d.removeAttribute('aria-current'); });
   }
   function stop() { clearInterval(timer); }
   function start() {
