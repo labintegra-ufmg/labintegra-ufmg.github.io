@@ -13,7 +13,7 @@ carlos-velasquez:
   openalex: A5056534298
   h_index: 11
   obras: 48
-  citacoes: 480
+  citacoes: 482
   formacao:
   - PhD, Universidade Federal de Minas Gerais (2013–2015)
   - Professional , Universidad Nacional Mayor de San Marcos (2010–2014)
@@ -25,12 +25,10 @@ carlos-velasquez:
 jose-pericles-freire:
   openalex: A5091037593
   h_index: 1
-  obras: 7
+  obras: 3
   citacoes: 4
   vinculos:
-  - PhD Student, Universidade Federal de Minas Gerais (2025–2029)
-  - Master, Universidade Federal de Minas Gerais (2023–2024)
-  - Physics, Universidade Federal de Minas Gerais (2017–2022)
+  - Universidade Federal de Minas Gerais
 ruan-luzia:
   openalex: A5014877466
   h_index: 1
